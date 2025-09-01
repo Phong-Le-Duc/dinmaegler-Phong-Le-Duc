@@ -1,5 +1,5 @@
 import heroimg from "/src/assets/homepage_hero.jpg";
-
+import SearchInput from "../common/SearchInput";
 
 export default function HeroSection() {
 
@@ -13,19 +13,8 @@ export default function HeroSection() {
 
             <div className="absolute inset-0 flex flex-col items-center justify-center">
                 <h1 className="h1 text-white m-4">Søg efter din drømmebolig</h1>
-                <div className="bg-white p-5 min-w-[300px] max-w-[600px] w-full">
-                    <p className="font-bold">Søg blandt 158 boliger til salg i 74 butikker</p>
-                    <p>Hvad skal din næste bolig indeholde</p>
+                <SearchInput />
 
-                    <div className="flex gap-2">
-                        <input
-                            type="search"
-                            placeholder="Hvad skal din næste bolig indeholde"
-                            className="p-2 rounded border border-gray-300 min-w-[300px] max-w-[600px] w-full"
-                        />
-                        <button className="bg-dinmaegler-blue text-white p-2 rounded">Søg</button>
-                    </div>
-                </div>
             </div>
         </section>
     )

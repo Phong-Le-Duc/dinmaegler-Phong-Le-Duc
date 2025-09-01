@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import homeIcon from "/src/assets/home_din_maegler.svg";
+import { useAuth } from "../../../contexts/AuthContext";
 
 export default function Navbar() {
+
+const auth = useAuth();
+const token = auth?.token;
 
     return (
         <>
@@ -19,9 +23,13 @@ export default function Navbar() {
                         <li>
                             <Link to="/list-Maeglere">Mæglere</Link>
                         </li>
+
+                     {token ? (
                         <li>
                             <Link to="/favorite-homes">Mine favoritter</Link>
                         </li>
+                     ) : null}
+
                         <li>
                             <Link to="/Contact">Kontakt os</Link>
                         </li>

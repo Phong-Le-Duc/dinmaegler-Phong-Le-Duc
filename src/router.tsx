@@ -13,6 +13,7 @@ import { HomeLoader } from "./Loaders/HomeLoader";
 import { HouseLoader } from "./Loaders/HouseLoader";
 import { AgentLoader } from "./Loaders/AgentLoader";
 import { HouseDetailLoader } from "./Loaders/HouseDetailLoader";
+import RequireAuth from "./components/common/RequireAuth"; // <-- import RequireAuth
 
 const router = createBrowserRouter([
     {
@@ -23,7 +24,6 @@ const router = createBrowserRouter([
                 index: true,
                 element: <Home />,
                 loader: HomeLoader
-
             },
             {
                 path: 'list-homes',
@@ -42,7 +42,11 @@ const router = createBrowserRouter([
             },
             {
                 path: 'favorite-homes',
-                element: <FavoriteHomes />
+                element: (
+                    <RequireAuth>
+                        <FavoriteHomes />
+                    </RequireAuth>
+                )
             },
             {
                 path: 'contact',
@@ -56,7 +60,6 @@ const router = createBrowserRouter([
                 path: 'register',
                 element: <Register />
             },
-
             {
                 path: '*',
                 element: <NotFound />
