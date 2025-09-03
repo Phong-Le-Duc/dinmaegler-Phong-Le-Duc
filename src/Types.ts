@@ -36,6 +36,7 @@ export type House = {
   cost: number
   agent: Agent
     floorplan : Floorplan
+    search: string;
   // Add other properties you see in the API response
 
 }
