@@ -6,6 +6,7 @@ type AuthContextType = {
     token: string | null;
     setToken: (token: string | null) => void;
     login: (token: string) => void;
+    logout: () => void;
     updateFavorites: (newFavorite: string) => void;
 };
 
@@ -28,8 +29,12 @@ export default function AuthProvider({ children }: AuthProviderProps) {
     function login(newToken: string) {
         setToken(newToken);
         sessionStorage.setItem("token", newToken);
-
     }
+
+    function logout() {
+    setToken(null);
+    sessionStorage.removeItem("token");
+}
 
     function updateFavorites(newFavorite: string) {
         let updatedFavorites;
@@ -62,7 +67,7 @@ export default function AuthProvider({ children }: AuthProviderProps) {
 
 
     return (
-        <AuthContext.Provider value={{ token, setToken, login, updateFavorites }}>
+        <AuthContext.Provider value={{ token, setToken, login, logout, updateFavorites }}>
             {children}
         </AuthContext.Provider>
     );
