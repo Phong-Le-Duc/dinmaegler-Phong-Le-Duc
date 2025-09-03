@@ -1,5 +1,5 @@
 import { type House } from "../Types.ts"
-
+// det her DRopDOWN SEARCH
 
 // this loader fetches houses from the API
 export async function HouseLoader({ request }: { request: Request }): Promise<{ houses: House[] }> {
@@ -10,6 +10,7 @@ export async function HouseLoader({ request }: { request: Request }): Promise<{ 
 
     console.log('Search params:', url.searchParams);
     console.log('Type filter:', type);
+
     const response = await fetch(`https://dinmaegler.onrender.com/homes${type ? `?type_eq=${type}` : ''}`);
     if (!response.ok) {
         throw new Error("Failed to fetch houses");
