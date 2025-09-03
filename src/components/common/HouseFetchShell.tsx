@@ -1,18 +1,16 @@
 import { useLoaderData } from "react-router";
-
 import { type House } from "../../Types";
 import HouseCard from "./HouseCard";
 
+type HouseFetchShellProps = {
+    search: string;
+};
 
-export default function HouseFetchShell() {
-    const { houses } = useLoaderData() as { houses: House[] };
-   
-    if (!houses || houses.length === 0) {
-        return <div>No houses found</div>;
-    }
+export default function HouseFetchShell({ search }: HouseFetchShellProps) {
+    const { sampleHouses: houses } = useLoaderData() as { sampleHouses: House[] };
+    console.log(houses);
 
-    console.log("houses", houses);
-
+ 
     return (
         <div className="grid grid-cols-2 gap-6">
             {houses.map(house => (

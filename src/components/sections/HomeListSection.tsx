@@ -1,19 +1,25 @@
-import HomeFetchShell from "../common/HouseFetchShell";
+import HouseFetchShell from "../common/HouseFetchShell";
 import { Link, useLocation } from "react-router";
+import type { House } from "../../Types";
 
-export default function HomeListSection() {
+type HomeListSectionProps = {
+    houses: House[];
+    search: string;
+};
+
+export default function HomeListSection({ search }: HomeListSectionProps) {
     const location = useLocation();
     const isHomePage = location.pathname === '/';
 
     return (
         <section className="bg-dinmaegler-grey">
-            <div className="content-width pb-30 ">
-                <header className=" pt-30 pb-10 text-center">
+            <div className="content-width pb-15 ">
+                <header className=" pt-15 pb-15 text-center">
                     <h2 className="h2">Udvalgte Boliger</h2>
                     <p>There are many variations of passages of Lorem Ipsum available but the this in <br />majority have suffered alteration in some</p>
                 </header>
 
-                <HomeFetchShell />
+                <HouseFetchShell search={search} />
 
                 {isHomePage && (
                     <div className="text-center mt-10">
