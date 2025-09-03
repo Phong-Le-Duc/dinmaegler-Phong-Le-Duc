@@ -5,10 +5,11 @@ import { addFavorite, removeFavorite, isFavorite } from "../../utility.ts/favori
 
 type HouseCardProps = {
     house: House;
-    onFavoriteChange?: () => void; // Add this prop for refresh
+    onFavoriteChange?: () => void;
+    shadow?: string;
 };
 
-export default function HouseCard({ house, onFavoriteChange }: HouseCardProps) {
+export default function HouseCard({ house, onFavoriteChange, shadow }: HouseCardProps) {
     const [favorite, setFavorite] = useState(false);
 
     useEffect(() => {
@@ -32,7 +33,7 @@ export default function HouseCard({ house, onFavoriteChange }: HouseCardProps) {
 
     return (
         <Link to={`/detail-homes/${house.id}`} className="block">
-            <article className="bg-dinmaegler-white hover:shadow-lg transition-shadow cursor-pointer relative">
+            <article className={`bg-dinmaegler-white ${shadow} hover:shadow-lg transition-shadow cursor-pointer relative content-width`}>
                 {/* Heart icon in top right */}
                 <span
                     className="absolute top-4 right-4 w-6 h-6 z-10 cursor-pointer"
@@ -61,6 +62,7 @@ export default function HouseCard({ house, onFavoriteChange }: HouseCardProps) {
                 </figure>
                 <div className="p-4">
                     <h3>{house.adress1}</h3>
+                    <h3><span>{house.postalcode}</span> {house.city}</h3>
                     <h3>{house.type}</h3>
                     <p>{house.size} m²</p>
                     <p>Energy label: {house.energylabel}</p>
