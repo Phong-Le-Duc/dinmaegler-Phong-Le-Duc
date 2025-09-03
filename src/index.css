@@ -4,13 +4,13 @@
   --color-dinmaegler-blue: #162A41;
   --color-dinmaegler-blue-light: #EEF7FF;
   --color-dinmaegler-white: #FFFFFF;
-  --color-dinmaegler-grey: #F8F8FB;
+  --color-dinmaegler-grey: #ebebeb;
 
 
 }
 
 @utility content-width {
-  @apply max-w-[1000px] container mx-auto;
+  @apply max-w-[800px] container mx-auto;
 
 }
 
