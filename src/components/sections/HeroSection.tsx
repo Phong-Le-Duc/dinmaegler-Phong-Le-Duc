@@ -1,8 +1,13 @@
 import heroimg from "/src/assets/homepage_hero.jpg";
 import SearchInput from "../common/SearchInput";
 
-export default function HeroSection() {
+type House = {
+    adress1: string;
+    // ...add other fields if needed
+};
 
+export default function HeroSection({ houses = [] }: { houses?: House[] }) {
+    console.log("houses", houses);
     return (
         <section className="relative w-full">
             <img
@@ -14,8 +19,7 @@ export default function HeroSection() {
             <div className="absolute inset-0 flex flex-col items-center justify-center">
                 <h1 className="h1 text-white m-4">Søg efter din drømmebolig</h1>
                 <SearchInput />
-
             </div>
         </section>
-    )
+    );
 }
