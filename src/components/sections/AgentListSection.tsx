@@ -7,9 +7,9 @@ export default function AgentListSection() {
     const isHomePage = location.pathname === '/';
 
     return (
-        <section className="bg-dinmaegler-grey">
-            <div className="content-width pb-30">
-                <header className="pt-30 pb-10 text-center">
+        <section className="bg-dinmaegler-white">
+            <div className="content-width pb-20">
+                <header className="pt-20 pb-10 text-center">
                     <h2 className="h2">Mød vores engagerede medarbejdere</h2>
                     <p>Din Mægler er garant for altid veluddannet assistance i dit boligsalg. Kontakt en af vores medarbejdere.</p>
                 </header>

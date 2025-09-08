@@ -4,7 +4,7 @@ import { useLoaderData, useNavigate } from "react-router";
 type House = {
     adress1: string;
     // ...add other fields if needed
-};
+}; 
 
 export default function SearchInput() {
     const { allHouses: houses } = useLoaderData() as { allHouses: House[] };

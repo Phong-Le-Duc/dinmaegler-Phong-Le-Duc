@@ -32,14 +32,16 @@ console.log(filteredHouses);
 
     return (
         <>
+        <div>
+            {/* <HomeListSection houses={houses} search={search} /> */}
             <Headline headlineText="Bolig liste" />
             <DropDownHouse />
-            {/* <HomeListSection houses={houses} search={search} /> */}
-            <div className="container mx-auto grid grid-cols-2 gap-6 py-10">
+            <div className="content-width mx-auto grid grid-cols-2 gap-6 py-10">
                 {filteredHouses.map((house) => (
                     <HouseCard key={house.id} house={house} />
                 ))}
             </div>
+           </div>
         </>
     );
 }

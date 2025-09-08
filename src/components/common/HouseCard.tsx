@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router";
 import { type House } from "../../Types";
-import { addFavorite, removeFavorite, isFavorite } from "../../utility.ts/favorites";
+import { addFavorite, removeFavorite, isFavorite } from "../../utility/favorites";
+import { getEnergyLabelColor } from "../../utility/energyLabelColor";
+
+
 
 type HouseCardProps = {
     house: House;
@@ -33,7 +36,7 @@ export default function HouseCard({ house, onFavoriteChange, shadow }: HouseCard
 
     return (
         <Link to={`/detail-homes/${house.id}`} className="block">
-            <article className={`bg-dinmaegler-white ${shadow} hover:shadow-lg transition-shadow cursor-pointer relative content-width`}>
+            <article className={`bg-dinmaegler-white shadow ${shadow ? shadow : ""} hover:shadow-lg transition-shadow cursor-pointer relative `}>
                 {/* Heart icon in top right */}
                 <span
                     className="absolute top-4 right-4 w-6 h-6 z-10 cursor-pointer"
@@ -54,18 +57,26 @@ export default function HouseCard({ house, onFavoriteChange, shadow }: HouseCard
                         />
                     </svg>
                 </span>
-                <figure>
+                <figure className="w-full h-48 overflow-hidden flex items-center justify-center">
                     <img
                         src={house.images ? house.images[0].url : '/images/placeholder.jpg'}
                         alt={`${house.type} i ${house.city}`}
+                        className="w-full h-full object-cover"
                     />
                 </figure>
                 <div className="p-4">
                     <h3>{house.adress1}</h3>
                     <h3><span>{house.postalcode}</span> {house.city}</h3>
-                    <h3>{house.type}</h3>
-                    <p>{house.size} m²</p>
-                    <p>Energy label: {house.energylabel}</p>
+                    <h3 className="border-b-1 pb-2 mb-2">{house.type}</h3>
+                    <div className="flex gap-2">
+                        <p className={`${getEnergyLabelColor(house.energylabel)} px-2 py-0.5 rounded-[2px]`}>
+                            {house.energylabel}
+                        </p>
+                        <p>
+                            {house.rooms} Værelser &nbsp;•&nbsp; {house.livingspace} m²
+                        </p>
+                        <p className="ml-auto font-bold"><span className="mx-1">kr.</span> {house.price.toLocaleString("da-DK")}</p>
+                    </div>
                 </div>
             </article>
         </Link>

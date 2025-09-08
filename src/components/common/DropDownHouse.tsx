@@ -7,7 +7,7 @@ export default function DropDownHouse() {
     const currentType = searchParams.get('hustype') || '';
 
     return (
-        <div className="p-4">
+        <div className="p-4 content-width">
             <p className="mb-4 font-bold">Søg efter dit drømmehus</p>
             <p className="mb-2">Ejendomstype</p>
 
