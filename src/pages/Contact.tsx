@@ -25,45 +25,45 @@ export default function Contact() {
                 </div>
 
 
-                <div className="flex border border-gray-300 p-10 rounded-[3px]  w-80 ">
-                    <div className="bg-dinmaegler-white p-5">
-                        <div className="flex">
+                <div className="flex border border-gray-300 p-10 rounded-[3px] w-80  items-center justify-center">
+                    <div className="bg-dinmaegler-white p-5 w-full">
+                        <div className="flex flex-col items-center border-b border-gray-300 pb-5 mb-5">
                             <figure>
                                 <img src="src/assets/phone-round-Icon.png" alt="" />
                             </figure>
-                            <div>
-                                <p>Ring til os</p>
+                            <div className="text-center">
+                                <p className="font-semibold">Ring til os</p>
                                 <p>+45 7070 4000</p>
                             </div>
                         </div>
 
-                        <div className="flex">
+                        <div className="flex flex-col items-center border-b border-gray-300 pb-5 mb-5">
                             <figure>
                                 <img src="src/assets/mail-round-icon.png" alt="" />
                             </figure>
-                            <div>
-                                <p>Ring til os</p>
-                                <p>+45 7070 4000</p>
+                            <div className="text-center">
+                                <p className="font-semibold">Send en mail</p>
+                                <p>4000@dinmaegler.com</p>
                             </div>
                         </div>
 
-                        <div className="flex">
+                        <div className="flex flex-col items-center border-b border-gray-300 pb-5 mb-5">
                             <figure>
                                 <img src="src/assets/map-round-icon.png" alt="" />
                             </figure>
-                            <div>
-                                <p>Ring til os</p>
-                                <p>+45 7070 4000</p>
+                            <div className="text-center">
+                                <p className="font-semibold">Besøg butikken</p>
+                                <p>Stændertorvet 78, <br /> 4000 Roskilde</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
             </div >
-                {/* STORE LOCATION MAP */}
-                <section>
-<h3 className="h3 w-full h-80 bg-amber-300">MAP PLACEHOLDER</h3>
-                </section>
+            {/* STORE LOCATION MAP */}
+            <section className="mt-4">
+                <h3 className="h3 w-full h-80 bg-amber-300">MAP PLACEHOLDER</h3>
+            </section>
         </>
     )
 }

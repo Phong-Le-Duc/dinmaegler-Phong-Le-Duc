@@ -19,7 +19,7 @@ export default function FavoriteCard({ house, onFavoriteChange }: FavoriteCardPr
     }
 
     return (
-        <div className="rounded-[2px] border-1 flex my-5 text-sm relative">
+        <div className="rounded-[2px] border-1 border-gray-50 flex my-5 text-sm relative">
             {/* Custom layout for favorite card */}
             <Link to={`/detail-homes/${house.id}`} className="block">
                 <figure className="w-60 flex-shrink-0 p-4">

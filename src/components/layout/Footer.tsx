@@ -65,7 +65,7 @@ export default function Footer() {
                                     <Link to="/Contact">Kontakt os</Link>
                                 </li>
                                 <li>
-                                    <Link to="/list-homes" className="flex items-center ml-auto">Log in / bliv bruger</Link>
+                                    <Link to="/login" className="flex items-center ml-auto">Log in / bliv bruger</Link>
                                 </li>
                             </ul>
                         </div>
