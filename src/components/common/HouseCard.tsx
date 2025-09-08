@@ -3,8 +3,7 @@ import { Link } from "react-router";
 import { type House } from "../../Types";
 import { addFavorite, removeFavorite, isFavorite } from "../../utility/favorites";
 import { getEnergyLabelColor } from "../../utility/energyLabelColor";
-
-
+import { useAuth } from "../../contexts/AuthContext";
 
 type HouseCardProps = {
     house: House;
@@ -14,6 +13,8 @@ type HouseCardProps = {
 
 export default function HouseCard({ house, onFavoriteChange, shadow }: HouseCardProps) {
     const [favorite, setFavorite] = useState(false);
+    const auth = useAuth();
+    const token = auth?.token;
 
     useEffect(() => {
         setFavorite(isFavorite(String(house.id)));
@@ -37,26 +38,28 @@ export default function HouseCard({ house, onFavoriteChange, shadow }: HouseCard
     return (
         <Link to={`/detail-homes/${house.id}`} className="block">
             <article className={`bg-dinmaegler-white shadow ${shadow ? shadow : ""} hover:shadow-lg transition-shadow cursor-pointer relative `}>
-                {/* Heart icon in top right */}
-                <span
-                    className="absolute top-4 right-4 w-6 h-6 z-10 cursor-pointer"
-                    onClick={handleFavoriteClick}
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill={favorite ? "red" : "transparent"}
-                        viewBox="0 0 24 24"
-                        stroke="white"
-                        className="w-full h-full"
+                {/* Heart icon in top right, only visible when logged in */}
+                {token && (
+                    <span
+                        className="absolute top-4 right-4 w-6 h-6 z-10 cursor-pointer"
+                        onClick={handleFavoriteClick}
                     >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.5}
-                            d="M12 21C12 21 4 13.5 4 8.5C4 5.42 6.42 3 9.5 3C11.24 3 12.91 4.01 13.44 5.36C13.97 4.01 15.64 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 15 21 12 21Z"
-                        />
-                    </svg>
-                </span>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill={favorite ? "red" : "transparent"}
+                            viewBox="0 0 24 24"
+                            stroke="white"
+                            className="w-full h-full"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={1.5}
+                                d="M12 21C12 21 4 13.5 4 8.5C4 5.42 6.42 3 9.5 3C11.24 3 12.91 4.01 13.44 5.36C13.97 4.01 15.64 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 15 21 12 21Z"
+                            />
+                        </svg>
+                    </span>
+                )}
                 <figure className="w-full h-48 overflow-hidden flex items-center justify-center">
                     <img
                         src={house.images ? house.images[0].url : '/images/placeholder.jpg'}

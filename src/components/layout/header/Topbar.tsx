@@ -3,12 +3,16 @@ import phoneIcon from "/src/assets/phone_icon.svg";
 import loginIcon from "/src/assets/login_icon.svg";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../../contexts/AuthContext";
+import { useLocation } from "react-router";
+
+
 
 export default function Topbar() {
     const auth = useAuth();
     const token = auth?.token;
     const logout = auth?.logout;
-
+    const location = useLocation();
+    
     return (
         <>
             <div className="bg-dinmaegler-blue">
@@ -34,7 +38,7 @@ export default function Topbar() {
                             <p className="text-white">Log ud</p>
                         </button>
                     ) : (
-                        <Link to="/login" className="flex items-center ml-auto cursor-pointer bg-black p-2 rounded">
+                        <Link to="/login" state={{ from: location }} className="flex items-center ml-auto cursor-pointer bg-black p-2 rounded">
                             <img src={loginIcon}
                                 alt="login"
                                 className="mr-2" />
