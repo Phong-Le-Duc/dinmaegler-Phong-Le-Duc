@@ -20,7 +20,7 @@ export default function DropDownHouse() {
                     }}
                     className="p-2 border border-gray-300 rounded bg-white min-w-[200px]"
                 >
-                    <option value="">Ejendomstype</option>
+                    <option value="">Alle typer</option>
                     <option value="Villa">Villa</option>
                     <option value="Ejerlejlighed">Ejerlejlighed</option>
                     <option value="Landejendom">Landejendom</option>

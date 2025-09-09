@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 import type { House } from "../../Types";
 import { useNavigate } from "react-router";
 import FlickityTest from "./FlickityTest";
+import { useAuth } from "../../contexts/AuthContext";
+import { addFavorite, removeFavorite, isFavorite } from "../../utility/favorites";
 
 type GalleryHouseProps = {
     dialogRef: React.RefObject<HTMLDialogElement | null>;
@@ -29,6 +31,25 @@ export default function GalleryHouse({
 }: GalleryHouseProps) {
 
     const navigate = useNavigate();
+
+    // Favorite logic
+    const auth = useAuth();
+    const token = auth?.token;
+    const [favorite, setFavorite] = useState(false);
+
+    useEffect(() => {
+        setFavorite(isFavorite(String(house.id)));
+    }, [house.id]);
+
+    function handleFavoriteClick() {
+        if (favorite) {
+            removeFavorite(String(house.id));
+            setFavorite(false);
+        } else {
+            addFavorite(String(house.id));
+            setFavorite(true);
+        }
+    }
 
     useEffect(() => {
         const dialog = dialogRef.current;
@@ -91,7 +112,28 @@ export default function GalleryHouse({
                 <Link to="?modal=kort">
                     <img src={map_icon} className="w-8 h-8 img-white" alt="lokation" />
                 </Link>
-                <img src={favorite_icon} className="w-8 h-8 img-white" alt="Favorite" />
+                {token && (
+                    <span
+                        className="w-8 h-8 flex items-center justify-center cursor-pointer"
+                        onClick={handleFavoriteClick}
+                        title={favorite ? "Fjern fra favoritter" : "Tilføj til favoritter"}
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill={favorite ? "red" : "transparent"}
+                            viewBox="0 0 24 24"
+                            stroke="#888"
+                            className="w-8 h-8"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={1.5}
+                                d="M12 21C12 21 4 13.5 4 8.5C4 5.42 6.42 3 9.5 3C11.24 3 12.91 4.01 13.44 5.36C13.97 4.01 15.64 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 15 21 12 21Z"
+                            />
+                        </svg>
+                    </span>
+                )}
             </div>
         </dialog>
     );

@@ -31,14 +31,14 @@ export default function Topbar() {
                     </a>
 
                     {token ? (
-                        <button onClick={logout} className="flex items-center ml-auto cursor-pointer bg-black p-2 rounded">
+                        <button onClick={logout} className="flex items-center ml-auto cursor-pointer bg-black p-2 rounded transition hover:bg-blue-700 hover:shadow">
                             <img src={loginIcon}
                                 alt="logout"
                                 className="mr-2" />
                             <p className="text-white">Log ud</p>
                         </button>
                     ) : (
-                        <Link to="/login" state={{ from: location }} className="flex items-center ml-auto cursor-pointer bg-black p-2 rounded">
+                        <Link to="/login" state={{ from: location }} className="flex items-center ml-auto cursor-pointer bg-black p-2 rounded transition hover:bg-blue-700 hover:shadow">
                             <img src={loginIcon}
                                 alt="login"
                                 className="mr-2" />
