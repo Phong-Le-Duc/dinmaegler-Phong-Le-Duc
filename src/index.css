@@ -58,6 +58,18 @@ dialog::backdrop {
 }
 
 
+
+/* PRICE SLIDER */
+
+.slider-price {
+    width: 350px; /* Set desired length */
+    margin: 0 auto;
+}
+
+.slider-price .MuiSlider-root {
+    width: 100%;
+}
+
 /* 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
