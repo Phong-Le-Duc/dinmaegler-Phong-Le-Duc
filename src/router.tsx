@@ -14,11 +14,13 @@ import { HouseLoader } from "./Loaders/HouseLoader";
 import { AgentLoader } from "./Loaders/AgentLoader";
 import { HouseDetailLoader } from "./Loaders/HouseDetailLoader";
 import RequireAuth from "./components/common/RequireAuth"; // <-- import RequireAuth
+import Loading from "./components/common/Loading"; // <-- import Loading component
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Layout />,
+        hydrateFallbackElement: <Loading />,
         children: [
             {
                 index: true,
@@ -46,7 +48,8 @@ const router = createBrowserRouter([
                     <RequireAuth>
                         <FavoriteHomes />
                     </RequireAuth>
-                )
+                ),
+                  loader: HouseLoader
             },
             {
                 path: 'contact',

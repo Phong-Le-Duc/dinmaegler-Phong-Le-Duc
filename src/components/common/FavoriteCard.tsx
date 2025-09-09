@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { type House } from "../../Types";
-import { getEnergyLabelColor } from "../../utility/energyLabelColor";
+import { getEnergyLabelColor } from "../../utility/EnergyLabelColor";
 import { removeFavorite } from "../../utility/favorites";
 
 type FavoriteCardProps = {

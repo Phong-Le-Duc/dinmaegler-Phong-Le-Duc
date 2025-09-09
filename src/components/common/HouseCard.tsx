@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router";
 import { type House } from "../../Types";
 import { addFavorite, removeFavorite, isFavorite } from "../../utility/favorites";
-import { getEnergyLabelColor } from "../../utility/energyLabelColor";
+import { getEnergyLabelColor } from "../../utility/EnergyLabelColor";
 import { useAuth } from "../../contexts/AuthContext";
 
 type HouseCardProps = {
