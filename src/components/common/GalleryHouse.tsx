@@ -16,6 +16,8 @@ type GalleryHouseProps = {
     showPlan: boolean;
     showMap: boolean;
     house: House;
+    favorite: boolean;
+    handleFavoriteClick: () => void;
 };
 
 export default function GalleryHouse({

@@ -184,6 +184,8 @@ export default function HouseDetail({ house }: HouseCardProps) {
                 showPlan={showPlan}
                 showMap={showMap}
                 house={house}
+                favorite={favorite} 
+                handleFavoriteClick={handleFavoriteClick}
             />
         </>
     );
