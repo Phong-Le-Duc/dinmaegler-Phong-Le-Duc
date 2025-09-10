@@ -1,5 +1,5 @@
 import { Link, useSearchParams } from "react-router";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
 import { addFavorite, removeFavorite, isFavorite } from "../../utility/favorites";
 import { type House } from "../../Types";

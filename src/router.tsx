@@ -3,8 +3,9 @@ import Layout from "./Layout";
 import Home from "./pages/Home";
 import ListBolig from "./pages/ListBolig";
 import DetailBolig from "./pages/DetailBolig";
-import ListMaeglere from "./pages/ListMaeglere";
 import FavoriteHomes from "./pages/FavoriteHomes";
+import ListMaeglere from "./pages/ListMaeglere";
+import DetailMaeglere from "./pages/DetailMaegler";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
@@ -12,6 +13,7 @@ import Register from "./pages/Register";
 import { HomeLoader } from "./Loaders/HomeLoader";
 import { HouseLoader } from "./Loaders/HouseLoader";
 import { AgentLoader } from "./Loaders/AgentLoader";
+import { AgentDetailLoader } from "./Loaders/AgentDetailLoader";
 import { HouseDetailLoader } from "./Loaders/HouseDetailLoader";
 import RequireAuth from "./components/common/RequireAuth"; // <-- import RequireAuth
 import Loading from "./components/common/Loading"; // <-- import Loading component
@@ -41,6 +43,11 @@ const router = createBrowserRouter([
                 path: 'list-maeglere',
                 element: <ListMaeglere />,
                 loader: AgentLoader
+            },
+            {
+                path: 'detail-maeglere/:id',
+                element: <DetailMaeglere />,
+                loader: AgentDetailLoader
             },
             {
                 path: 'favorite-homes',

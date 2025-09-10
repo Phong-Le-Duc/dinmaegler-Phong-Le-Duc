@@ -3,13 +3,13 @@ import { type House } from "../Types.ts"
 
 // this loader fetches houses from the API
 export async function HouseLoader({ request }: { request: Request }): Promise<{ houses: House[] }> {
-    console.log(request);
+    // console.log(request);
 
     const url = new URL(request.url);
     const type = url.searchParams.get('hustype'); //henter værdien fra type_eq....
 
-    console.log('Search params:', url.searchParams);
-    console.log('Type filter:', type);
+    // console.log('Search params:', url.searchParams);
+    // console.log('Type filter:', type);
 
     const response = await fetch(`https://dinmaegler.onrender.com/homes${type ? `?type_eq=${type}` : ''}`);
     if (!response.ok) {

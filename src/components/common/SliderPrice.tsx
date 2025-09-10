@@ -1,7 +1,7 @@
 import Slider from '@mui/material/Slider';
 
 export default function SliderPrice({ value, onChange }: { value: number[]; onChange: (val: number[]) => void }) {
-    const handleChange = (event: Event, newValue: number | number[]) => {
+    const handleChange = (_: unknown, newValue: number | number[]) => {
         onChange(newValue as number[]);
     };
 

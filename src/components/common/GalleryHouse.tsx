@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router";
 import type { House } from "../../Types";
 import { useNavigate } from "react-router";
 import FlickityTest from "./FlickityTest";
 import { useAuth } from "../../contexts/AuthContext";
-import { addFavorite, removeFavorite, isFavorite } from "../../utility/favorites";
+// import { addFavorite, removeFavorite, isFavorite } from "../../utility/favorites";
 
 type GalleryHouseProps = {
     dialogRef: React.RefObject<HTMLDialogElement | null>;
@@ -28,8 +28,10 @@ export default function GalleryHouse({
     gallery_icon,
     plantegning_icon,
     map_icon,
-    favorite_icon,
-    house
+    // favorite_icon,
+    house,
+    favorite,
+    handleFavoriteClick
 }: GalleryHouseProps) {
 
     const navigate = useNavigate();
@@ -37,21 +39,22 @@ export default function GalleryHouse({
     // Favorite logic
     const auth = useAuth();
     const token = auth?.token;
-    const [favorite, setFavorite] = useState(false);
 
-    useEffect(() => {
-        setFavorite(isFavorite(String(house.id)));
-    }, [house.id]);
+    // const [favorite, setFavorite] = useState(false);
 
-    function handleFavoriteClick() {
-        if (favorite) {
-            removeFavorite(String(house.id));
-            setFavorite(false);
-        } else {
-            addFavorite(String(house.id));
-            setFavorite(true);
-        }
-    }
+    // useEffect(() => {
+    //     setFavorite(isFavorite(String(house.id)));
+    // }, [house.id]);
+
+    // function handleFavoriteClick() {
+    //     if (favorite) {
+    //         removeFavorite(String(house.id));
+    //         setFavorite(false);
+    //     } else {
+    //         addFavorite(String(house.id));
+    //         setFavorite(true);
+    //     }
+    // }
 
     useEffect(() => {
         const dialog = dialogRef.current;

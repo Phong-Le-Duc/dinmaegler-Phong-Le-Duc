@@ -2,11 +2,7 @@ import { useLoaderData } from "react-router";
 import { type House } from "../../Types";
 import HouseCard from "./HouseCard";
 
-type HouseFetchShellProps = {
-    search: string;
-};
-
-export default function HouseFetchShell({ search }: HouseFetchShellProps) {
+export default function HouseFetchShell() {
     const { sampleHouses: houses } = useLoaderData() as { sampleHouses: House[] };
     console.log(houses);
 
