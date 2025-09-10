@@ -41,7 +41,7 @@ export default function HouseDetail({ house }: HouseCardProps) {
             <article className="">
                 <figure className="full-w">
                     <img
-                        className="object-cover h-auto w-full"
+                        className="object-cover h-auto w-full max-h-[65vh]"
                         src={house.images ? house.images[0].url : '/images/placeholder.jpg'}
                         alt={`${house.type} i ${house.city}`}
                     />
@@ -61,6 +61,7 @@ export default function HouseDetail({ house }: HouseCardProps) {
                             </Link>
                             <Link to="?modal=kort">
                                 <img src={map_icon} className="w-12 h-12" alt="lokation" />
+                                
                             </Link>
                             {/* Heart icon: only visible if logged in */}
                             {token && (

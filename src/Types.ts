@@ -37,6 +37,8 @@ export type House = {
   agent: Agent
     floorplan : Floorplan
     search: string;
+    lat: number;
+    long: number;
   // Add other properties you see in the API response
 
 }

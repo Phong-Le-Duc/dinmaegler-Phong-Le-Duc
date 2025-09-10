@@ -1,17 +1,31 @@
 // import HouseCard from "../components/common/HouseCard"
 import AgentDetail from "../components/common/AgentDetail"
 import { useLoaderData } from "react-router"
-import { type Agent } from "../Types"
+import { type Agent, type House } from "../Types"
 import "../components/common/flickity.css"
+import SearchInputSimple from "../components/common/SearchInputSimple";
+import Add1 from "../components/common/Add1";
+import Headline from "../components/layout/Headline";
 
 export default function DetailMaeglere() {
-    const { agent } = useLoaderData() as { agent: Agent };
+  const { agent, allHouses } = useLoaderData() as { agent: Agent, allHouses: House[] };
 
 
     return (
         <>
-            {/* <Headline headlineText="Bolig detail" /> */}
-            <AgentDetail agent={agent} />
+            <div>
+                <Headline headlineText="Bolig detail" />
+                <div className="content-width my-8 flex">
+                    <section>
+                        <AgentDetail agent={agent} />
+                    </section>
+
+                    <section className="overflow-visible">
+                        <SearchInputSimple />
+                        <Add1 />
+                    </section>
+                </div>
+            </div>
         </>
     )
 }

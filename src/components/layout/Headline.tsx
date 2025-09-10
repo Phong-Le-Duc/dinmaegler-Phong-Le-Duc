@@ -10,7 +10,7 @@ export default function Headline({ headlineText, headlineNumber }: HeadlineProps
         <>
             <section className="relative w-full">
                 <figure className="z-0">
-                    <img src="src/assets/building.png" alt="" className="w-full" />
+                    <img src="/src/assets/building.png" alt="" className="w-full" />
                 </figure>
 
                 <div className="absolute inset-0 bg-dinmaegler-blue/85 z-10"></div>

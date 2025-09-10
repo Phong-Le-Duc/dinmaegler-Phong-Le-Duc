@@ -54,6 +54,8 @@ export default function Contact() {
                             <div className="text-center">
                                 <p className="font-semibold">Besøg butikken</p>
                                 <p>Stændertorvet 78, <br /> 4000 Roskilde</p>
+                            
+                                <p>55.64152356357667, 12.080469112533445</p>
                             </div>
                         </div>
                     </div>
@@ -61,8 +63,17 @@ export default function Contact() {
 
             </div >
             {/* STORE LOCATION MAP */}
-            <section className="mt-4">
-                <h3 className="h3 w-full h-80 bg-amber-300">MAP PLACEHOLDER</h3>
+            <section className="mt-4 h-120">
+             
+                     <iframe
+                    className=" block"
+                    width="100%"
+                    height="90%"
+                    style={{ border: 0 }}
+                    src={`https://www.google.com/maps?q=55.64152356357667,12.080469112533445&z=15&output=embed`}
+                    allowFullScreen
+                    title="Map"
+                />
             </section>
         </>
     )

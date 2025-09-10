@@ -102,7 +102,16 @@ export default function GalleryHouse({
             ) : showPlan ? (
                 <img className="max-w-full max-h-[70vh] object-contain block mx-auto" src={house.floorplan && house.floorplan.url ? house.floorplan.url : "/images/placeholder.jpg"} />
             ) : showMap ? (
-                <img className="max-w-full max-h-[70vh] object-contain block mx-auto" src="/src/assets/house_lokation.png" />
+                // <img className="max-w-full max-h-[70vh] object-contain block mx-auto" src="/src/assets/house_lokation.png" />
+                <iframe
+                    className=" block"
+                    width="100%"
+                    height="90%"
+                    style={{ border: 0 }}
+                    src={`https://www.google.com/maps?q=${house.lat},${house.long}&z=15&output=embed`}
+                    allowFullScreen
+                    title="Map"
+                />
             ) : (
                 <img className="max-w-full max-h-[70vh] object-contain block mx-auto" src="/src/assets/house_lokation.png" />
             )}
