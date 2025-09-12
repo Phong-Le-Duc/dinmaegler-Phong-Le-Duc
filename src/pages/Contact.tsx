@@ -22,6 +22,8 @@ export default function Contact() {
 
                 <div className="flex gap-5 justify-center">
                     <WriteUsForm />
+
+                    
                 </div>
 
 

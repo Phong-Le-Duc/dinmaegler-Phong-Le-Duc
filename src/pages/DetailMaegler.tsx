@@ -6,6 +6,8 @@ import "../components/common/flickity.css"
 import SearchInputSimple from "../components/common/SearchInputSimple";
 import Add1 from "../components/common/Add1";
 import Headline from "../components/layout/Headline";
+import FormAgentContact from "../components/common/FormAgentContact";
+
 
 export default function DetailMaeglere() {
   const { agent, allHouses } = useLoaderData() as { agent: Agent, allHouses: House[] };
@@ -14,10 +16,11 @@ export default function DetailMaeglere() {
     return (
         <>
             <div>
-                <Headline headlineText="Bolig detail" />
-                <div className="content-width my-8 flex">
+                <Headline headlineText="Kontakt en medarbejder" />
+                <div className="content-width my-8 grid grid-cols-2 gap-8">
                     <section>
                         <AgentDetail agent={agent} />
+                        <FormAgentContact agent={agent} />
                     </section>
 
                     <section className="overflow-visible">

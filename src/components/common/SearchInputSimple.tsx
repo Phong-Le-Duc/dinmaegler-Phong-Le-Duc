@@ -48,10 +48,10 @@ export default function SearchInputSimple() {
     }
 
     return (
-        <div className="bg-white p-5 min-w-[300px] max-w-[600px] w-full">
+        <div className="bg-dinmaegler-blue-light p-5 min-w-[300px] max-w-[600px] w-full mb-4">
             <p className="font-bold">Search Property</p>
          
-            <form onSubmit={handleSubmit} className="flex gap-2">
+            <form onSubmit={handleSubmit} className="flex gap-2 ">
                 <div className="w-full relative">
                     <input
                         type="search"
@@ -60,7 +60,7 @@ export default function SearchInputSimple() {
                         onChange={handleChange}
                         autoComplete="off"
                         placeholder="Søg på fx. glaskeramisk komfur, bryggers, kælder eller lignende"
-                        className="p-2 rounded border border-gray-300 min-w-[300px] max-w-[600px] w-full"
+                        className="p-2 rounded border border-gray-300 min-w-[300px] max-w-[600px] w-full bg-white"
                     />
                     {suggestions.length > 0 && (
                         <ul className="absolute left-0 right-0 bg-white border mt-1 rounded shadow z-10">
