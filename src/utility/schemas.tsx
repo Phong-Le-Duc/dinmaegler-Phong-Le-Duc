@@ -7,7 +7,7 @@ export const agentContactSchema = z.object({
     message: z.string().min(10, "Besked skal være mindst 10 tegn langt"),
 
 });
-export type ContactFormData = z.infer<typeof agentContactSchema>;
+export type AgentContactFormData = z.infer<typeof agentContactSchema>;
 
 
 export const contactSchema = z.object({
@@ -17,4 +17,25 @@ export const contactSchema = z.object({
     message: z.string().min(10, "Besked skal være mindst 10 tegn langt"),
 
 });
-export type ContactFormData2 = z.infer<typeof contactSchema>;
+export type ContactFormData = z.infer<typeof contactSchema>;
+
+
+
+export const loginSchema = z.object({
+    identifier: z.string().min(1, "Email er påkrævet").email("Ugyldig email adresse"),
+    password: z.string().min(6, "Adgangskode skal være mindst 6 tegn langt"),
+});
+// export type LoginSchemaData = z.infer<typeof loginSchema>;
+
+
+
+export const registerSchema = z.object({
+    username: z.string().min(2, "Navn skal være mindst 2 tegn langt"),
+    email: z.string().min(1, "Email er påkrævet").email("Ugyldig email adresse"),
+    password: z.string().min(6, "Adgangskode skal være mindst 6 tegn langt"),
+    confirmPassword: z.string().min(6, "Bekræft adgangskode skal være mindst 6 tegn langt"),
+}).refine((data) => data.password === data.confirmPassword, {
+    path: ["custom"],
+    message: "Adgangskoderne matcher ikke",
+});
+// export type LoginSchemaData = z.infer<typeof loginSchema>;

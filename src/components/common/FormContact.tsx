@@ -16,7 +16,6 @@ export default function FormContact({ }) {
 
     function handleSubmit(event: React.FormEvent) {
         event.preventDefault();
-
         const formData = new FormData(event.target as HTMLFormElement);
         //    FormData er ikke et objekt, derfor laver vi det om til et objekt 
         const data = Object.fromEntries(formData.entries());

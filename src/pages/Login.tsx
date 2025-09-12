@@ -1,12 +1,12 @@
 import Headline from "../components/layout/Headline";
-import LoginForm from "../components/common/LoginForm";
+import FormLogin from "../components/common/FormLogin";
 
 export default function Login() {
 
     return (
         <>
            <Headline headlineText="Login" />
-           <LoginForm />
+           <FormLogin />
         </>
     )
 }

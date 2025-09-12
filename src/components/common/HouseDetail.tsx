@@ -61,7 +61,7 @@ export default function HouseDetail({ house }: HouseCardProps) {
                             </Link>
                             <Link to="?modal=kort">
                                 <img src={map_icon} className="w-12 h-12" alt="lokation" />
-                                
+
                             </Link>
                             {/* Heart icon: only visible if logged in */}
                             {token && (
@@ -185,7 +185,7 @@ export default function HouseDetail({ house }: HouseCardProps) {
                 showPlan={showPlan}
                 showMap={showMap}
                 house={house}
-                favorite={favorite} 
+                favorite={favorite}
                 handleFavoriteClick={handleFavoriteClick}
             />
         </>

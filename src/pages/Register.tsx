@@ -1,5 +1,5 @@
 import Headline from "../components/layout/Headline";
-import RegisterForm from "../components/common/RegisterForm";
+import RegisterForm from "../components/common/FormRegister";
 
 export default function Register() {
 

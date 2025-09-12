@@ -9,7 +9,7 @@ type House = {
 export default function HeroSection({ houses = [] }: { houses?: House[] }) {
     console.log("houses", houses);
     return (
-        <section className="relative w-full">
+        <section className="relative w-full h-[70vh]">
             <img
                 src={heroimg}
                 alt="hero image"

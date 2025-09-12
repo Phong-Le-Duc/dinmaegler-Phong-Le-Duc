@@ -21,7 +21,8 @@ export default function SearchInput() {
                 houses
                     .map(house => house.adress1)
                     .filter(addr =>
-                        addr.toLowerCase().includes(value.toLowerCase())
+                        addr.toLowerCase().includes(value.toLowerCase()) 
+
                     )
             );
         } else {
