@@ -1,4 +1,4 @@
-import WriteUsForm from "../components/common/WriteUsForm"
+import FormContact from "../components/common/FormContact"
 import Headline from "../components/layout/Headline"
 
 
@@ -21,7 +21,7 @@ export default function Contact() {
                 <div></div>
 
                 <div className="flex gap-5 justify-center">
-                    <WriteUsForm />
+                    <FormContact/>
 
                     
                 </div>
