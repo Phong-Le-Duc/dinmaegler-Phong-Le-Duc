@@ -4,7 +4,7 @@ type HeadlineProps = {
 
 };
 
-export default function Headline({ headlineText, headlineNumber }: HeadlineProps) {
+export default function Headline({ headlineText }: HeadlineProps) {
 
     return (
         <>
