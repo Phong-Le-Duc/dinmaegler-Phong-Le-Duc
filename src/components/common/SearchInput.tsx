@@ -4,7 +4,7 @@ import { useLoaderData, useNavigate } from "react-router";
 type House = {
     adress1: string;
     // ...add other fields if needed
-}; 
+};
 
 export default function SearchInput() {
     const { allHouses: houses } = useLoaderData() as { allHouses: House[] };
@@ -21,7 +21,7 @@ export default function SearchInput() {
                 houses
                     .map(house => house.adress1)
                     .filter(addr =>
-                        addr.toLowerCase().includes(value.toLowerCase()) 
+                        addr.toLowerCase().includes(value.toLowerCase())
 
                     )
             );
@@ -52,7 +52,7 @@ export default function SearchInput() {
                         value={input}
                         onChange={handleChange}
                         autoComplete="off"
-                        placeholder="Søg på fx. glaskeramisk komfur, bryggers, kælder eller lignende"
+                        placeholder="Søg på fx. hus, villa, lejlighed eller lignende"
                         className="p-2 rounded border border-gray-300 min-w-[300px] max-w-[600px] w-full"
                     />
                     {suggestions.length > 0 && (

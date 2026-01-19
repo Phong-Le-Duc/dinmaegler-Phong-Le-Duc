@@ -4,7 +4,7 @@ type HeadlineProps = {
 
 };
 
-export default function Headline({ headlineText }: HeadlineProps) {
+export default function Headline({ headlineText, headlineNumber }: HeadlineProps) {
 
     return (
         <>
@@ -17,7 +17,7 @@ export default function Headline({ headlineText }: HeadlineProps) {
 
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  flex z-20 ">
                     <div className="w-100">
-                        <h3 className="h3 text-white text-center">{headlineText}{headlineNumber}</h3>
+                        <h3 className="h3 text-white text-center">{headlineText}{headlineNumber !== undefined ? headlineNumber : ''}</h3>
 
 
                     </div>
