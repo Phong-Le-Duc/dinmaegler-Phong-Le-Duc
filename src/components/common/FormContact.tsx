@@ -69,7 +69,7 @@ export default function FormContact({ }) {
                                 className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-400"
                             // required
                             />
-                            <p>{errors && errors?.name?.errors[0]}</p>
+                            <p className="text-red-600 text-sm min-h-[1.5em]">{errors && errors?.name?.errors[0]}</p>
                         </div>
                         <div className="flex flex-col w-1/2">
                             <label htmlFor="email" className="mb-1 text-sm text-gray-700">Email</label>
@@ -77,10 +77,10 @@ export default function FormContact({ }) {
                                 type="email"
                                 id="email"
                                 name="email"
-                                className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-400"
+                                className="border border-gray-300 rounded py-2 focus:outline-none focus:border-blue-400"
                             // required
                             />
-                            <p>{errors && errors?.email?.errors[0]}</p>
+                            <p className="text-red-600 text-sm min-h-[1.5em]">{errors && errors?.email?.errors[0]}</p>
                         </div>
                     </div>
                     <div className="flex flex-col">
@@ -92,7 +92,7 @@ export default function FormContact({ }) {
                             className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-400"
                         // required
                         />
-                        <p>{errors && errors?.subject?.errors[0]}</p>
+                        <p className="text-red-600 text-sm min-h-[1.5em]">{errors && errors?.subject?.errors[0]}</p>
                     </div>
                     <div className="flex flex-col">
                         <label htmlFor="message" className="mb-1 text-sm text-gray-700">Besked</label>
@@ -103,9 +103,9 @@ export default function FormContact({ }) {
                             className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-400 resize-none"
                         // required
                         ></textarea>
-                        <p>{errors && errors?.message?.errors[0]}</p>
+                        <p className="text-red-600 text-sm min-h-[1.5em]">{errors && errors?.message?.errors[0]}</p>
                     </div>
-                    <button type="submit">Send besked</button>
+                    <button type="submit" className="bg-blue-300 p-2">Send besked</button>
                 </Form>
             </section>
         </>
