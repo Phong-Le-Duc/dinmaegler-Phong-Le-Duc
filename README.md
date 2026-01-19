@@ -1,69 +1,80 @@
-# React + TypeScript + Vite
+# Din Mægler – Ejendomsmægler Portfolio Projekt
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dette projekt er en moderne ejendomsmægler-applikation udviklet som portfolio-projekt. Herunder finder du en oversigt over de teknologier, teknikker og elementer, der er anvendt.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Brugte teknologier
 
-## Expanding the ESLint configuration
+- **React** (med TypeScript)  
+  Moderne frontend-udvikling med komponentbaseret arkitektur og type-sikkerhed.
+- **React Router**  
+  Klient-side routing for navigation mellem sider.
+- **Tailwind CSS**  
+  Utility-first CSS framework for hurtig og responsiv styling.
+- **Formik & Yup**  
+  Håndtering og validering af formularer.
+- **Vite**  
+  Hurtig udviklingsserver og build-værktøj.
+- **ESLint & Prettier**  
+  Kodekvalitet og automatisk formatering.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Funktionelle elementer
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Dynamisk boligvisning**  
+  Huse vises med billeder, detaljer, galleri, plantegning og kort.
+- **Favoritfunktion**  
+  Brugere kan tilføje/fjerne boliger som favoritter (kræver login).
+- **Kontaktformular**  
+  Brugervenlig formular med validering og fejlbeskeder.
+- **Agentinformation**  
+  Ansvarlig mægler vises med billede, kontaktinfo og titel.
+- **Google Maps integration**  
+  Interaktivt kort med butikkens placering.
+- **Modaler**  
+  Galleri, plantegning og kort vises i modale vinduer.
+- **Fejlhåndtering**  
+  Brugervenlige fejlbeskeder ved validering og navigation.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## Udviklingsteknikker
+
+- **State management med React Hooks**  
+  Brug af `useState`, `useEffect`, `useRef` m.fl.
+- **Props og komponent-kommunikation**  
+  Data og funktioner sendes mellem komponenter via props.
+- **Custom hooks**  
+  Fx til autentificering og favoritter.
+- **Betinget rendering**  
+  Elementer vises/skjules afhængigt af brugerens status og valg.
+- **Formularvalidering**  
+  Med Yup og Formik for robust brugerinput.
+- **SVG og billedhåndtering**  
+  Ikoner og billeder håndteres effektivt.
+- **Routing og URL-parametre**  
+  Modalvisning styres via query params.
+
+---
+
+## Mappestruktur (uddrag)
+
+```
+src/
+  assets/           // Billeder og ikoner
+  components/       // Genanvendelige komponenter
+  pages/            // Sider (fx Home, Contact, HouseDetail)
+  utility/          // Hjælpefunktioner og valideringsskemaer
+  App.tsx           // Hovedapplikation
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Kontakt
+
+Projektet er udviklet af Phong Le Duc som portfolio.  
+Kontakt: [4000@dinmaegler.com](mailto:4000@dinmaegler.com)
+
+---
