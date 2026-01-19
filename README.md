@@ -6,7 +6,7 @@ Dette projekt er en moderne ejendomsmægler-applikation udviklet som portfolio-p
 
 ## Brugte teknologier
 
-- **React** (med TypeScript)  
+- **React** (**TypeScript**)  
   Moderne frontend-udvikling med komponentbaseret arkitektur og type-sikkerhed.
 - **React Router**  
   Klient-side routing for navigation mellem sider.
@@ -23,25 +23,31 @@ Dette projekt er en moderne ejendomsmægler-applikation udviklet som portfolio-p
 
 ## Funktionelle elementer
 
+- **Login-system**  
+  Brugere kan oprette sig og logge ind for at få adgang til ekstra funktioner.
+- **Favoritfunktion**  
+  Loggede brugere kan tilføje/fjerne boliger som favoritter.
 - **Dynamisk boligvisning**  
   Huse vises med billeder, detaljer, galleri, plantegning og kort.
-- **Favoritfunktion**  
-  Brugere kan tilføje/fjerne boliger som favoritter (kræver login).
+- **Modaler**  
+  Galleri, plantegning og kort vises i modale vinduer.
 - **Kontaktformular**  
   Brugervenlig formular med validering og fejlbeskeder.
 - **Agentinformation**  
   Ansvarlig mægler vises med billede, kontaktinfo og titel.
 - **Google Maps integration**  
   Interaktivt kort med butikkens placering.
-- **Modaler**  
-  Galleri, plantegning og kort vises i modale vinduer.
 - **Fejlhåndtering**  
   Brugervenlige fejlbeskeder ved validering og navigation.
+- **Responsivt design**  
+  Sitet tilpasser sig både desktop og mobil.
 
 ---
 
 ## Udviklingsteknikker
 
+- **TypeScript**  
+  Gennemgående typesikkerhed i hele projektet.
 - **State management med React Hooks**  
   Brug af `useState`, `useEffect`, `useRef` m.fl.
 - **Props og komponent-kommunikation**  
@@ -70,7 +76,7 @@ src/
   App.tsx           // Hovedapplikation
 ```
 
-
+---
 
 ## Kontakt
 
