@@ -75,6 +75,6 @@ src/
 ## Kontakt
 
 Projektet er udviklet af Phong Le Duc som portfolio.  
-Kontakt: [4000@dinmaegler.com](mailto:4000@dinmaegler.com)
+Kontakt: phongleduc@gmail.com
 
 ---
