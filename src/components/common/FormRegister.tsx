@@ -1,4 +1,4 @@
-import { Form, useLocation, useNavigate } from "react-router";
+import { Form, useNavigate } from "react-router";
 import { z } from "zod/v4"; // Importer zod for at kunne bruge z.treeifyError
 import { registerSchema } from "../../utility/schemas";
 import { useState } from "react";

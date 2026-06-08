@@ -3,14 +3,14 @@ import { type House } from "../../Types";
 import HouseCard from "./HouseCard";
 
 type HouseFetchShellProps = {
-    search: string;
+    search?: string;
 };
 
-export default function HouseFetchShell({ search }: HouseFetchShellProps) {
+export default function HouseFetchShell({ search: _search }: HouseFetchShellProps) {
     const { sampleHouses: houses } = useLoaderData() as { sampleHouses: House[] };
     console.log(houses);
 
- 
+
     return (
         <div className="grid grid-cols-2 gap-6">
             {houses.map(house => (

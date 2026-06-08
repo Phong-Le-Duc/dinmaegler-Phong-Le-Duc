@@ -10,7 +10,7 @@ import FormAgentContact from "../components/common/FormAgentContact";
 
 
 export default function DetailMaeglere() {
-  const { agent, allHouses } = useLoaderData() as { agent: Agent, allHouses: House[] };
+    const { agent } = useLoaderData() as { agent: Agent, allHouses: House[] };
 
 
     return (
