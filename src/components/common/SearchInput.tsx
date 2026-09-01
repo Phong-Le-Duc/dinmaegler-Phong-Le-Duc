@@ -42,7 +42,7 @@ export default function SearchInput() {
 
     return (
         <div className="bg-white px-4 py-5 w-[calc(100%-32px)] md:w-full md:px-4 md:min-w-[300px] max-w-[600px] mx-auto md:mx-0 rounded-sm">
-            <p className="font-bold">Søg blandt 158 boliger til salg i 74 butikker</p>
+            <p className="font-bold">Søg blandt 158 boliger til salg <span className="hidden md:inline">i 74 butikker</span></p>
             <p>Hvad skal din næste bolig indeholde</p>
             <form onSubmit={handleSubmit} className="flex gap-2">
                 <div className="w-full relative">
