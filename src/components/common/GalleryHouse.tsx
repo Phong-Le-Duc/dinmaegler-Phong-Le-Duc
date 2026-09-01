@@ -84,7 +84,7 @@ export default function GalleryHouse({
 
     return (
         <dialog
-            className="backdrop:bg-black backdrop:opacity-75 mx-auto my-4 w-full max-w-[40rem] h-auto max-h-[80vh] bg-transparent border-0"
+            className="backdrop:bg-black backdrop:opacity-75 w-[calc(100%-32px)] md:w-full md:max-w-[40rem] mx-auto my-4 h-auto max-h-[80vh] bg-transparent border-0"
             ref={dialogRef}
         >
             <button
