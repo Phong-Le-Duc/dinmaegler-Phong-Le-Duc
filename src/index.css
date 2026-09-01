@@ -75,11 +75,12 @@ slider-price .MuiSlider-root {
 }
 
 /* Ensure each Flickity cell occupies the carousel viewport width to avoid horizontal overflow */
-.flickity-slider > * {
+.flickity-slider>* {
   display: inline-block;
   vertical-align: top;
   width: 100%;
 }
+
 .carousel img {
   width: 100%;
   height: auto;
@@ -87,6 +88,7 @@ slider-price .MuiSlider-root {
   margin: 0 auto;
   max-width: 100%;
 }
+
 .flickity-viewport {
   max-width: 100%;
 }
