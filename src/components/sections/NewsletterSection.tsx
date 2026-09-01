@@ -6,8 +6,8 @@ export default function NewsletterSection() {
 
     return (
         <section className="relative w-full mb-20 min-h-[320px] md:min-h-[240px]">
-            <figure className="z-0">
-                <img src={buildingImage} alt="" className="w-full" />
+            <figure className="absolute inset-0 z-0">
+                <img src={buildingImage} alt="" className="w-full h-full object-cover" />
             </figure>
 
             <div className="absolute inset-0 bg-dinmaegler-blue/85 z-10"></div>
