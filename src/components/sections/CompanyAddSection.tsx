@@ -26,13 +26,13 @@ return (
                             <h2 className="font-bold text-2xl mb-4">
                                 Vi har fulgt danskerne hjem <br />i snart 4 årtier
                             </h2>
-                            <p className="font-bold mb-2">Det synes vi siger noget om os!</p>
-                            <p className="mb-2">
+                            <p className="font-bold mb-2 text-sm md:text-base">Det synes vi siger noget om os!</p>
+                            <p className="mb-2 text-sm md:text-base">
                                 It is a long established fact that a reader will be distracted by the readable
                                 content of a page when looking at its layout. The point of using Lorem Ipsum is
                                 that it has normal distribution.
                             </p>
-                            <p>
+                            <p className="text-sm md:text-base">
                                 It is a long established fact that a reader will be distracted by the readable
                                 content of a page when looking at its layout.
                             </p>
