@@ -61,15 +61,40 @@ export default function GalleryHouse({
         if (showGallery || showPlan || showMap) {
             if (dialog && !dialog.open) {
                 dialog.showModal();
-                // Give the dialog a tick to become visible, then ask Flickity to recalc sizes
-                setTimeout(() => {
+                // Resize/reposition Flickity several times and after images load
+                const doResize = () => {
                     try {
                         flickityRef.current?.flkty?.resize?.();
                         flickityRef.current?.flkty?.reposition?.();
                     } catch (e) {
                         // ignore if ref not present
                     }
-                }, 60);
+                };
+
+                // A few timed recalculations to catch layout and image load timing
+                setTimeout(doResize, 60);
+                setTimeout(doResize, 300);
+                setTimeout(doResize, 700);
+
+                // Listen for image loads inside the dialog and trigger resize once loaded
+                try {
+                    const imgs = dialog.querySelectorAll('img');
+                    const onImgLoad = () => {
+                        doResize();
+                    };
+                    imgs.forEach((img) => {
+                        if ((img as HTMLImageElement).complete) {
+                            // already loaded
+                            doResize();
+                        } else {
+                            img.addEventListener('load', onImgLoad, { once: true });
+                        }
+                    });
+                } catch (e) {
+                    // ignore
+                }
+                // final fallback: trigger window resize
+                setTimeout(() => window.dispatchEvent(new Event('resize')), 500);
             }
         } else {
             dialog?.close();
