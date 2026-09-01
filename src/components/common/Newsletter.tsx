@@ -31,7 +31,7 @@ export default function Newsletter() {
     }
 
     return (
-        <div className="w-full flex justify-center mt-4">
+        <div className="w-full flex justify-center mt-4 px-4 md:px-0">
             <form onSubmit={handleSubmit} className="relative flex gap-2 w-full max-w-[600px] z-30">
                 <input
                     type="email"
