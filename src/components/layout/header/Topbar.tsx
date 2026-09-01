@@ -16,8 +16,8 @@ export default function Topbar() {
     return (
         <>
             <div className="bg-dinmaegler-blue">
-                <div className="header-width flex flex-col md:flex-row items-center gap-2 md:justify-between p-4">
-                    <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 w-full md:w-auto text-white">
+                <div className="header-width flex items-center justify-between p-4">
+                    <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 text-white">
                         <a
                             href="mailto:4000@dinmaegler.com"
                             className="flex items-center hover:underline"
@@ -32,19 +32,19 @@ export default function Topbar() {
                         </a>
                     </div>
 
-                    <div className="w-full md:w-auto flex justify-center md:justify-end mt-2 md:mt-0">
+                    <div className="flex items-center md:ml-auto">
                         {token ? (
-                            <button onClick={logout} className="flex items-center cursor-pointer bg-black p-2 rounded transition hover:bg-blue-700 hover:shadow">
+                            <button onClick={logout} className="flex items-center cursor-pointer bg-black px-2 py-1 rounded text-sm transition hover:bg-blue-700 hover:shadow">
                                 <img src={loginIcon}
                                     alt="logout"
-                                    className="mr-2" />
+                                    className="w-4 h-4 mr-2" />
                                 <p className="text-white">Log ud</p>
                             </button>
                         ) : (
-                            <Link to="/login" state={{ from: location }} className="flex items-center cursor-pointer bg-black p-2 rounded transition hover:bg-blue-700 hover:shadow">
+                            <Link to="/login" state={{ from: location }} className="flex items-center cursor-pointer bg-black px-2 py-1 rounded text-sm transition hover:bg-blue-700 hover:shadow">
                                 <img src={loginIcon}
                                     alt="login"
-                                    className="mr-2" />
+                                    className="w-4 h-4 mr-2" />
                                 <p className="text-white">Log in</p>
                             </Link>
                         )}
