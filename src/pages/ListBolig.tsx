@@ -34,7 +34,7 @@ export default function ListBolig() {
                         <DropDownHouse />
                     </div>
                     <div className="w-full md:flex-1 flex items-center mt-4 md:mt-0 md:ml-4">
-                        <div className="w-full md:max-w-[520px] lg:max-w-[760px]">
+                        <div className="w-full md:max-w-[480px] lg:max-w-[640px]">
                             <SliderPrice value={priceRange} onChange={setPriceRange} />
                         </div>
                     </div>
