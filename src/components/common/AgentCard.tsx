@@ -12,6 +12,7 @@ export default function AgentCard({ agent }: { agent: Agent }) {
                     <img
                         src={agent.image ? agent.image.url : '/images/placeholder.jpg'}
                         alt={`${agent.name} - ${agent.title}`}
+                        className="w-full h-48 object-cover"
                     />
                 </figure>
                 <div className="text-center py-4">

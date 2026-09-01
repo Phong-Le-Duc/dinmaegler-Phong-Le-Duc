@@ -71,14 +71,14 @@ export default function HouseCard({ house, onFavoriteChange, shadow }: HouseCard
                     <h3>{house.adress1}</h3>
                     <h3><span>{house.postalcode}</span> {house.city}</h3>
                     <h3 className="border-b-1 pb-2 mb-2">{house.type}</h3>
-                    <div className="flex gap-2">
+                    <div className="flex flex-col md:flex-row md:items-center gap-2">
                         <p className={`${getEnergyLabelColor(house.energylabel)} px-2 py-0.5 rounded-[2px]`}>
                             {house.energylabel}
                         </p>
                         <p>
                             {house.rooms} Værelser &nbsp;•&nbsp; {house.livingspace} m²
                         </p>
-                        <p className="ml-auto font-bold"><span className="mx-1">kr.</span> {house.price.toLocaleString("da-DK")}</p>
+                        <p className="md:ml-auto font-bold"><span className="mx-1">kr.</span> {house.price.toLocaleString("da-DK")}</p>
                     </div>
                 </div>
             </article>

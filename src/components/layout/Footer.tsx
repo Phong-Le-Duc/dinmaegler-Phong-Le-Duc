@@ -74,8 +74,8 @@ export default function Footer() {
                 </div>
 
                 {/* Overlapping bottom section */}
-                <div className="w-full -mt-8 z-0 absolute top-120 left-0">
-                    <div className="bg-dinmaegler-white w-full h-50 py-7 flex flex-col  pl-174.5">
+                <div className="w-full -mt-8 z-0 md:absolute md:top-28 left-0 relative">
+                    <div className="bg-dinmaegler-white w-full md:h-50 h-auto py-7 flex flex-col md:pl-40 pl-4">
                         <p className="mb-2">medlem af</p>
                         <img src="src/assets/DMS.png" alt="" className="mb-2 w-24 h-auto" />
                         <p>Dansk Mægler Sammenslutning</p>
