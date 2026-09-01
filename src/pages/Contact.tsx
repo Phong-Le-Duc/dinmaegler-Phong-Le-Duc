@@ -26,8 +26,8 @@ export default function Contact() {
                 </div>
 
                 <div>
-                    <div className="bg-dinmaegler-white pt-10 p-5 border border-gray-300 rounded-[3px] w-full md:w-80 flex items-center justify-center mt-6">
-                        <div className="flex flex-col items-center border-b border-gray-300 pb-5 mb-5">
+                    <div className="bg-dinmaegler-white pt-10 p-5 border border-gray-300 rounded-[3px] w-full md:w-80 flex flex-col items-center justify-center mt-6">
+                        <div className="w-full flex flex-col items-center border-b border-gray-300 pb-5 mb-5">
                             <figure>
                                 <img src="src/assets/phone-round-Icon.png" alt="" />
                             </figure>
@@ -37,7 +37,7 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        <div className="flex flex-col items-center border-b border-gray-300 pb-5 mb-5">
+                        <div className="w-full flex flex-col items-center border-b border-gray-300 pb-5 mb-5">
                             <figure>
                                 <img src="src/assets/mail-round-icon.png" alt="" />
                             </figure>
@@ -47,7 +47,7 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        <div className="flex flex-col items-center mb-5">
+                        <div className="w-full flex flex-col items-center mb-5">
                             <figure>
                                 <img src="src/assets/map-round-icon.png" alt="" />
                             </figure>
