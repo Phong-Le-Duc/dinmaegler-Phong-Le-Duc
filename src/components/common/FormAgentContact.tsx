@@ -61,27 +61,27 @@ export default function FormAgentContact({ agent }: AgentContactProps) {
         <>
             <section className="my-8">
                 <p>Kontakt {agent.name}</p>
-                <Form method="post" onSubmit={handleSubmit} className="flex flex-col gap-6 max-w-md p-6 bg-white rounded border-1 border-gray-300 shadow">
+                <Form method="post" onSubmit={handleSubmit} className="flex flex-col gap-6 w-full md:max-w-md p-6 bg-white rounded border-1 border-gray-300 shadow">
 
-                    <div className="flex gap-4">
-                        <div className="flex flex-col w-1/2">
+                    <div className="flex flex-col md:flex-row gap-4">
+                        <div className="flex flex-col w-full md:w-1/2">
                             <label htmlFor="name" className="mb-1 text-sm text-gray-700">Navn</label>
                             <input
                                 type="text"
                                 id="name"
                                 name="name"
-                                className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-400"
+                                className="border border-gray-300 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400"
                             // required
                             />
                             <p>{errors && errors?.name?.errors[0]}</p>
                         </div>
-                        <div className="flex flex-col w-1/2">
+                        <div className="flex flex-col w-full md:w-1/2">
                             <label htmlFor="email" className="mb-1 text-sm text-gray-700">Email</label>
                             <input
                                 type="email"
                                 id="email"
                                 name="email"
-                                className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-400"
+                                className="border border-gray-300 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400"
                             // required
                             />
                             <p>{errors && errors?.email?.errors[0]}</p>

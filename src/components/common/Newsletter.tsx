@@ -31,7 +31,7 @@ export default function Newsletter() {
     }
 
     return (
-        <div className="w-full flex justify-center mt-4">
+        <div className="w-full flex justify-center mt-4 px-4 md:px-0">
             <form onSubmit={handleSubmit} className="relative flex gap-2 w-full max-w-[600px] z-30">
                 <input
                     type="email"
@@ -39,7 +39,7 @@ export default function Newsletter() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     disabled={isLoading}
-                    className="p-2 rounded border border-gray-300 bg-dinmaegler-white min-w-[300px] max-w-[600px] w-full"
+                    className="p-2 rounded border border-gray-300 bg-dinmaegler-white w-full md:min-w-[300px] max-w-[600px]"
                 />
                 <button
                     type="submit"

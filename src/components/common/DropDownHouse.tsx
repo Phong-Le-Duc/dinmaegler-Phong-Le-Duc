@@ -18,7 +18,7 @@ export default function DropDownHouse() {
                     onChange={() => {
                         formRef.current?.submit();
                     }}
-                    className="p-2 border border-gray-300 rounded bg-white min-w-[200px]"
+                    className="p-2 border border-gray-300 rounded bg-white w-full md:w-auto md:min-w-[200px]"
                 >
                     <option value="">Alle typer</option>
                     <option value="Villa">Villa</option>

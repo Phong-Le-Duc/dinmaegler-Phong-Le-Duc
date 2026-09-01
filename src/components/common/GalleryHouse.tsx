@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router";
 import type { House } from "../../Types";
 import { useNavigate } from "react-router";
@@ -61,11 +61,47 @@ export default function GalleryHouse({
         if (showGallery || showPlan || showMap) {
             if (dialog && !dialog.open) {
                 dialog.showModal();
+                // Resize/reposition Flickity several times and after images load
+                const doResize = () => {
+                    try {
+                        flickityRef.current?.flkty?.resize?.();
+                        flickityRef.current?.flkty?.reposition?.();
+                    } catch (e) {
+                        // ignore if ref not present
+                    }
+                };
+
+                // A few timed recalculations to catch layout and image load timing
+                setTimeout(doResize, 60);
+                setTimeout(doResize, 300);
+                setTimeout(doResize, 700);
+
+                // Listen for image loads inside the dialog and trigger resize once loaded
+                try {
+                    const imgs = dialog.querySelectorAll('img');
+                    const onImgLoad = () => {
+                        doResize();
+                    };
+                    imgs.forEach((img) => {
+                        if ((img as HTMLImageElement).complete) {
+                            // already loaded
+                            doResize();
+                        } else {
+                            img.addEventListener('load', onImgLoad, { once: true });
+                        }
+                    });
+                } catch (e) {
+                    // ignore
+                }
+                // final fallback: trigger window resize
+                setTimeout(() => window.dispatchEvent(new Event('resize')), 500);
             }
         } else {
             dialog?.close();
         }
     }, [showGallery, showPlan, showMap, dialogRef]);
+
+    const flickityRef = useRef<any>(null);
 
     // Listen for dialog close (Escape or button)
     useEffect(() => {
@@ -84,7 +120,7 @@ export default function GalleryHouse({
 
     return (
         <dialog
-            className="backdrop:bg-black backdrop:opacity-75 mx-auto my-4 w-[40rem] h-[30rem] bg-transparent border-0"
+            className="backdrop:bg-black backdrop:opacity-75 w-[calc(100%-32px)] md:w-full md:max-w-[40rem] mx-auto my-4 h-auto max-h-[80vh] bg-transparent border-0"
             ref={dialogRef}
         >
             <button
@@ -98,7 +134,9 @@ export default function GalleryHouse({
                 &times;
             </button>
             {showGallery ? (
-                <FlickityTest house={house} />
+                <div className="bg-white rounded-md p-2">
+                    <FlickityTest house={house} flickityRef={flickityRef} />
+                </div>
             ) : showPlan ? (
                 <img className="max-w-full max-h-[70vh] object-contain block mx-auto" src={house.floorplan && house.floorplan.url ? house.floorplan.url : "/images/placeholder.jpg"} />
             ) : showMap ? (

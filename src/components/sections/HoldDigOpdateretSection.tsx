@@ -19,7 +19,7 @@ export default function HoldDigOpdateretSection() {
                             <span className="text-white font-medium group-hover:text-dinmaegler-blue">Apple Store</span>
                         </button>
                     </div>
-                    <div className="flex items-end ml-8 absolute right-12 bottom-0">
+                    <div className="hidden md:flex items-end ml-8 absolute right-12 bottom-0">
                         <figure className="z-10">
                             <img src="src/assets/phone1.png" alt="App på telefon 1" className="h-65 w-auto object-contain" />
                         </figure>

@@ -29,13 +29,17 @@ export default function ListBolig() {
         <>
             <div>
                 <Headline headlineText="Bolig liste" />
-                <div className="content-width flex items-center gap-6">
-                    <DropDownHouse />
-                    <div className="flex-1 flex items-center mt-18 mr-5 ">
-                        <SliderPrice value={priceRange} onChange={setPriceRange} />
+                <div className="content-width flex flex-col md:flex-row items-start md:items-center gap-6">
+                    <div className="w-full md:w-auto">
+                        <DropDownHouse />
+                    </div>
+                    <div className="w-full md:flex-1 flex items-center mt-4 md:mt-0 md:ml-4">
+                        <div className="w-full md:max-w-[480px] lg:max-w-[640px]">
+                            <SliderPrice value={priceRange} onChange={setPriceRange} />
+                        </div>
                     </div>
                 </div>
-                <div className="content-width mx-auto grid grid-cols-2 gap-6 py-10">
+                <div className="content-width mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 py-10">
                     {filteredHouses.length === 0 ? (
                         <div className="col-span-2 text-center text-lg text-gray-500 h-50 mt-10">
                             Der findes desværre ingen ejendomme i denne prisklasse.

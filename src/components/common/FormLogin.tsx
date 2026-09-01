@@ -95,7 +95,7 @@ export default function FormLogin() {
 
                     <div className="">
                         <p className="mt-5 mb-1">Login med</p>
-                        <div className="grid grid-cols-3 gap-2">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
                             <button className="bg-red-500 text-white py-2 rounded-[3px] transition hover:bg-red-600 hover:shadow cursor-pointer">Google</button>
                             <button className="bg-blue-600 text-white py-2 rounded-[3px] transition hover:bg-blue-700 hover:shadow cursor-pointer">Facebook</button>
                             <button className="bg-blue-400 text-white py-2 rounded-[3px] transition hover:bg-blue-500 hover:shadow cursor-pointer">Twitter</button>

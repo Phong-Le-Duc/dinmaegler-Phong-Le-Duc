@@ -41,8 +41,8 @@ export default function SearchInput() {
     }
 
     return (
-        <div className="bg-white p-5 min-w-[300px] max-w-[600px] w-full">
-            <p className="font-bold">Søg blandt 158 boliger til salg i 74 butikker</p>
+        <div className="bg-white px-4 py-5 w-[calc(100%-32px)] md:w-full md:px-4 md:min-w-[300px] max-w-[600px] mx-auto md:mx-0 rounded-sm">
+            <p className="font-bold">Søg blandt 158 boliger til salg <span className="hidden md:inline">i 74 butikker</span></p>
             <p>Hvad skal din næste bolig indeholde</p>
             <form onSubmit={handleSubmit} className="flex gap-2">
                 <div className="w-full relative">
@@ -53,7 +53,7 @@ export default function SearchInput() {
                         onChange={handleChange}
                         autoComplete="off"
                         placeholder="Søg på fx. hus, villa, lejlighed eller lignende"
-                        className="p-2 rounded border border-gray-300 min-w-[300px] max-w-[600px] w-full"
+                        className="p-2 rounded border border-gray-300 w-full md:min-w-[300px] max-w-[600px]"
                     />
                     {suggestions.length > 0 && (
                         <ul className="absolute left-0 right-0 bg-white border mt-1 rounded shadow z-10">
