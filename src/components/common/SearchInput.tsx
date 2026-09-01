@@ -41,7 +41,7 @@ export default function SearchInput() {
     }
 
     return (
-        <div className="bg-white px-4 py-5 w-full md:px-4 md:min-w-[300px] max-w-[600px]">
+        <div className="bg-white px-4 py-5 w-full md:px-4 md:min-w-[300px] max-w-[600px] mx-4 md:mx-0 rounded-sm">
             <p className="font-bold">Søg blandt 158 boliger til salg i 74 butikker</p>
             <p>Hvad skal din næste bolig indeholde</p>
             <form onSubmit={handleSubmit} className="flex gap-2">
