@@ -50,7 +50,7 @@ export default function SearchInputSimple() {
     return (
         <div className="bg-dinmaegler-blue-light p-5 w-full md:min-w-[300px] max-w-[600px] mb-4">
             <p className="font-bold">Search Property</p>
-         
+
             <form onSubmit={handleSubmit} className="flex gap-2 ">
                 <div className="w-full relative">
                     <input

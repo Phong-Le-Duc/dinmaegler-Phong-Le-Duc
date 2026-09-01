@@ -12,7 +12,7 @@ export default function Topbar() {
     const token = auth?.token;
     const logout = auth?.logout;
     const location = useLocation();
-    
+
     return (
         <>
             <div className="bg-dinmaegler-blue">

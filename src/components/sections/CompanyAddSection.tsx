@@ -12,8 +12,8 @@ export default function CompanyAddSection() {
                         />
                     </figure>
 
-                            {/* Blue border: hidden on mobile, show (absolute) on md+ */}
-                            <div className="hidden md:block md:absolute w-48 h-48 md:w-80 md:h-80 md:top-5 md:left-5 border-[10px] border-dinmaegler-blue pointer-events-none mt-4 md:mt-0">
+                    {/* Blue border: hidden on mobile, show (absolute) on md+ */}
+                    <div className="hidden md:block md:absolute w-48 h-48 md:w-80 md:h-80 md:top-5 md:left-5 border-[10px] border-dinmaegler-blue pointer-events-none mt-4 md:mt-0">
                         <div className="md:absolute bottom-0 right-0 w-20 h-20 md:w-32 md:h-32 bg-dinmaegler-blue text-white flex flex-col items-center justify-center text-center px-2">
                             <p className="text-3xl font-bold leading-none">38+</p>
                             <p className="text-sm leading-tight">års mægler-<br />erfaring</p>

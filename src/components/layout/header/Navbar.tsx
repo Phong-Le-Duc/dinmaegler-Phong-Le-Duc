@@ -5,9 +5,9 @@ import { useAuth } from "../../../contexts/AuthContext";
 
 export default function Navbar() {
 
-const auth = useAuth();
-const token = auth?.token;
-const [open, setOpen] = useState(false);
+    const auth = useAuth();
+    const token = auth?.token;
+    const [open, setOpen] = useState(false);
 
     return (
         <>
@@ -36,11 +36,11 @@ const [open, setOpen] = useState(false);
                             <Link to="/list-Maeglere">Mæglere</Link>
                         </li>
 
-                     {token ? (
-                        <li>
-                            <Link to="/favorite-homes">Mine favoritter</Link>
-                        </li>
-                     ) : null}
+                        {token ? (
+                            <li>
+                                <Link to="/favorite-homes">Mine favoritter</Link>
+                            </li>
+                        ) : null}
 
                         <li>
                             <Link to="/Contact">Kontakt os</Link>
