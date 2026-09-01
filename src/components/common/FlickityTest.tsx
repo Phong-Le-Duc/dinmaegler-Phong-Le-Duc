@@ -6,9 +6,7 @@ import Flickity from 'react-flickity-component';
 const flickityOptions = {
     initialIndex: 0,
     wrapAround: true,
-    pageDots: true,
-    percentPosition: true,
-    cellAlign: 'center'
+    pageDots: true
 }
 
 
