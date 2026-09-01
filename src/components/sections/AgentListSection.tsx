@@ -9,7 +9,7 @@ export default function AgentListSection() {
     return (
         <section className="bg-dinmaegler-white">
             <div className="content-width pb-20">
-                <header className="pt-20 pb-10 text-center">
+                <header className="pb-10 text-center">
                     <h2 className="h2">Mød vores engagerede medarbejdere</h2>
                     <p>Din Mægler er garant for altid veluddannet assistance i dit boligsalg. Kontakt en af vores medarbejdere.</p>
                 </header>
