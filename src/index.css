@@ -98,6 +98,33 @@
   transform: translateY(-50%) !important;
 }
 
+/* Ensure Flickity viewport and slider adapt to smaller screens */
+.flickity-viewport {
+  height: auto !important;
+  max-height: 70vh !important;
+}
+.flickity-slider {
+  display: flex !important;
+  align-items: center !important;
+}
+.flickity-slider img {
+  position: relative !important;
+  left: auto !important;
+  transform: none !important;
+}
+
+@media (max-width: 640px) {
+  .carousel img {
+    max-height: 50vh !important;
+  }
+  .flickity-button {
+    display: none !important; /* hide arrows on very small screens to avoid overlap */
+  }
+  .flickity-page-dots {
+    bottom: 8px;
+  }
+}
+
 /* 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
