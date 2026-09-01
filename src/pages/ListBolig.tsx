@@ -29,12 +29,12 @@ export default function ListBolig() {
         <>
             <div>
                 <Headline headlineText="Bolig liste" />
-                <div className="content-width flex flex-col lg:flex-row items-start lg:items-center gap-6">
-                    <div className="w-full lg:w-auto">
+                <div className="content-width flex flex-col md:flex-row items-start md:items-center gap-6">
+                    <div className="w-full md:w-auto">
                         <DropDownHouse />
                     </div>
-                    <div className="w-full lg:flex-1 flex items-center mt-4 lg:mt-0 lg:ml-4">
-                        <div className="w-full lg:max-w-[760px]">
+                    <div className="w-full md:flex-1 flex items-center mt-4 md:mt-0 md:ml-4">
+                        <div className="w-full md:max-w-[520px] lg:max-w-[760px]">
                             <SliderPrice value={priceRange} onChange={setPriceRange} />
                         </div>
                     </div>
