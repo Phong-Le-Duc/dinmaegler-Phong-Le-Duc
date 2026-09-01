@@ -6,7 +6,7 @@ export default function Footer() {
         <>
             <footer className="bg-dinmaegler-grey flex flex-col items-center relative">
                 <div className="content-width py-10 relative z-10">
-                    <div className="my-10">
+                    <div className="my-10 px-4 md:px-0">
                         <Link to="/" >
                             <img src={homeIcon} alt="Home" className="h-10 mr-1" />
                         </Link>
