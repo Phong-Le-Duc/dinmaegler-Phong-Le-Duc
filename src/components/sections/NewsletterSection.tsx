@@ -5,7 +5,7 @@ import buildingImage from "../../assets/building.png"
 export default function NewsletterSection() {
 
     return (
-        <section className="relative w-full mb-20">
+        <section className="relative w-full mb-20 min-h-[320px] md:min-h-[240px]">
             <figure className="z-0">
                 <img src={buildingImage} alt="" className="w-full" />
             </figure>
