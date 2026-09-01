@@ -2,19 +2,19 @@ export default function CompanyAddSection () {
 
 return (
       <section className="content-width mb-10 p-4 ">
-                    <div className="mx-auto p-4 grid grid-cols-2 gap-6 max-w-[1000px] border-solid border-b border-gray-500 pb-20 mb-20">
+                    <div className="mx-auto p-4 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-full md:max-w-[1000px] border-solid border-b border-gray-500 pb-20 mb-20">
                         <div className="relative h-[310px]">
                             <figure className="w-full h-full">
                                 <img
                                     src="src/assets/family-moving-using-boxes 1.png"
                                     alt="family moving"
-                                    className="w-80 h-full object-cover"
+                                    className="w-full h-full object-cover md:w-80"
                                 />
                             </figure>
     
                             {/* Blue border */}
-                            <div className="absolute w-80 h-80 top-5 left-5 border-[10px] border-dinmaegler-blue pointer-events-none">
-                                <div className="absolute bottom-0 right-0 w-32 h-32 bg-dinmaegler-blue text-white flex flex-col items-center justify-center text-center px-2">
+                            <div className="absolute w-48 h-48 md:w-80 md:h-80 top-5 left-5 border-[10px] border-dinmaegler-blue pointer-events-none">
+                                <div className="absolute bottom-0 right-0 w-20 h-20 md:w-32 md:h-32 bg-dinmaegler-blue text-white flex flex-col items-center justify-center text-center px-2">
                                     <p className="text-3xl font-bold leading-none">38+</p>
                                     <p className="text-sm leading-tight">års mægler-<br />erfaring</p>
                                 </div>
@@ -22,7 +22,7 @@ return (
                             {/* Text box anchored to border */}
                         </div>
     
-                        <div className="max-w-[400px]">
+                        <div className="max-w-full md:max-w-[400px]">
                             <h2 className="font-bold text-2xl mb-4">
                                 Vi har fulgt danskerne hjem <br />i snart 4 årtier
                             </h2>
@@ -61,10 +61,10 @@ return (
                         </div>
                     </div>
     
-                    <div className="grid grid-cols-3 gap-6 ">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
                         <div className="flex">
                             <figure className="mr-2 bg-dinmaegler-blue-light p-2 self-start">
-                                <img src="src/assets/property1.png" alt="house" className="w-20 h-auto" />
+                                <img src="src/assets/property1.png" alt="house" className="w-16 md:w-20 h-auto" />
                             </figure>
                             <div>
                                 <p className="font-bold mb-2">Bestil et salgstjek</p>

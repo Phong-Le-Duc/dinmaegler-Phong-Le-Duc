@@ -13,7 +13,7 @@ export default function Contact() {
             </div>
 
 
-            <div className="flex justify-center gap-15 my-10 flex-wrap">
+            <div className="flex justify-center gap-8 my-10 flex-wrap">
 
                 <div className="flex flex-col  gap-6">
                     <div className="p-2 max-w-md mt-10">
@@ -26,7 +26,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                    <div className="bg-dinmaegler-white pt-10 p-5 w-fullflex border border-gray-300 rounded-[3px] w-80 items-center justify-center mt-62.5">
+                    <div className="bg-dinmaegler-white pt-10 p-5 border border-gray-300 rounded-[3px] w-full md:w-80 flex items-center justify-center mt-6">
                         <div className="flex flex-col items-center border-b border-gray-300 pb-5 mb-5">
                             <figure>
                                 <img src="src/assets/phone-round-Icon.png" alt="" />

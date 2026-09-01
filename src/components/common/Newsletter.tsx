@@ -39,7 +39,7 @@ export default function Newsletter() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     disabled={isLoading}
-                    className="p-2 rounded border border-gray-300 bg-dinmaegler-white min-w-[300px] max-w-[600px] w-full"
+                    className="p-2 rounded border border-gray-300 bg-dinmaegler-white w-full md:min-w-[300px] max-w-[600px]"
                 />
                 <button
                     type="submit"

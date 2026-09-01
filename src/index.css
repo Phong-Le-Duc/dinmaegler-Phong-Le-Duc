@@ -62,8 +62,9 @@ dialog::backdrop {
 /* PRICE SLIDER */
 
 .slider-price {
-    width: 350px; /* Set desired length */
-    margin: 0 auto;
+  width: 100%; /* Responsive: full width up to max */
+  max-width: 350px; /* Set desired max length */
+  margin: 0 auto;
 }
 
 .slider-price .MuiSlider-root {

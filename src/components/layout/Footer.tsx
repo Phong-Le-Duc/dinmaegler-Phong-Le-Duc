@@ -8,15 +8,15 @@ export default function Footer() {
                 <div className="content-width py-10 relative z-10">
                     <div className="my-10">
                         <Link to="/" >
-                            <img src={homeIcon} alt="Home" className="w-45 mr-1" />
+                            <img src={homeIcon} alt="Home" className="h-10 mr-1" />
                         </Link>
                         <p>
                             There are many variations of passages of Lorem Ipsum available, but the majority have <br />
                             suffered alteration in some form, by injected humour, or randomised words.
                         </p>
                     </div>
-                    <div className="flex">
-                        <div className="bg-dinmaegler-white px-8 py-10 shadow-2xl flex flex-col gap-4">
+                    <div className="flex flex-col md:flex-row">
+                        <div className="bg-dinmaegler-white px-6 py-6 shadow-2xl flex flex-col gap-4 w-full md:w-auto">
                             <div className="flex">
                                 <figure>
                                     <img src="src/assets/phone-round-Icon.png" alt="" />
@@ -49,7 +49,7 @@ export default function Footer() {
                             </p>
                         </div>
 
-                        <div className="p-5 ml-10 flex flex-col gap-4">
+                        <div className="p-5 md:ml-10 flex flex-col gap-4">
                             <h3 className="text-lg font-semibold">Quick links</h3>
                             <ul className="gap-2 flex flex-col">
                                 <li>
