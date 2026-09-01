@@ -10,7 +10,7 @@
 }
 
 @utility content-width {
-  @apply max-w-[800px] container mx-auto;
+  @apply max-w-[800px] container mx-auto px-4 md:px-0;
 
 }
 
@@ -46,11 +46,12 @@
 /* DIALOG tailwind reset */
 @layer base {
   dialog {
-all: revert
+    all: revert
   }
-dialog::backdrop {
-  all: revert;
- }
+
+  dialog::backdrop {
+    all: revert;
+  }
 }
 
 .img-white {
@@ -62,13 +63,15 @@ dialog::backdrop {
 /* PRICE SLIDER */
 
 .slider-price {
-  width: 100%; /* Responsive: full width up to max */
-  max-width: 350px; /* Set desired max length */
+  width: 100%;
+  /* Responsive: full width up to max */
+  max-width: 350px;
+  /* Set desired max length */
   margin: 0 auto;
 }
 
 .slider-price .MuiSlider-root {
-    width: 100%;
+  width: 100%;
 }
 
 /* 
