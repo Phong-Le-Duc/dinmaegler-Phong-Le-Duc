@@ -84,7 +84,7 @@ export default function GalleryHouse({
 
     return (
         <dialog
-            className="backdrop:bg-black backdrop:opacity-75 mx-auto my-4 w-full max-w-[40rem] h-auto max-h-[80vh] bg-transparent border-0"
+            className="fixed inset-0 p-4 bg-transparent backdrop:bg-black backdrop:opacity-75 flex items-center justify-center md:relative md:inset-auto md:p-0 md:mx-auto md:my-4 w-full md:w-auto max-h-[90vh] border-0"
             ref={dialogRef}
         >
             <button
@@ -116,7 +116,7 @@ export default function GalleryHouse({
                 <img className="max-w-full max-h-[70vh] object-contain block mx-auto" src="/src/assets/house_lokation.png" />
             )}
 
-            <div className="flex gap-4 justify-center mt-4 absolute left-1/2 transform -translate-x-1/2">
+            <div className="flex gap-4 justify-center mt-4">
                 <Link to="?modal=galleri">
                     <img src={gallery_icon} className="w-8 h-8 img-white" alt="Gallery" />
                 </Link>
