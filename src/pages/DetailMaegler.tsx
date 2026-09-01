@@ -17,7 +17,7 @@ export default function DetailMaeglere() {
         <>
             <div>
                 <Headline headlineText="Kontakt en medarbejder" />
-                <div className="content-width my-8 grid grid-cols-2 gap-8">
+                <div className="content-width my-8 grid grid-cols-1 md:grid-cols-2 gap-8">
                     <section>
                         <AgentDetail agent={agent} />
                         <FormAgentContact agent={agent} />

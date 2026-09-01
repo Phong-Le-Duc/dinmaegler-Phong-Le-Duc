@@ -35,7 +35,7 @@ export default function ListBolig() {
                         <SliderPrice value={priceRange} onChange={setPriceRange} />
                     </div>
                 </div>
-                <div className="content-width mx-auto grid grid-cols-2 gap-6 py-10">
+                <div className="content-width mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 py-10">
                     {filteredHouses.length === 0 ? (
                         <div className="col-span-2 text-center text-lg text-gray-500 h-50 mt-10">
                             Der findes desværre ingen ejendomme i denne prisklasse.

@@ -135,7 +135,7 @@ export default function HouseDetail({ house }: HouseCardProps) {
                             </tbody>
                         </table>
                     </div>
-                    <section className="grid grid-cols-2 content-width gap-4 mb-10">
+                    <section className="grid grid-cols-1 md:grid-cols-2 content-width gap-4 mb-10">
                         <h3 className="font-bold">Beskrivelse</h3>
                         <h3 className="font-bold">Ansvarlig mægler</h3>
                         <div>
