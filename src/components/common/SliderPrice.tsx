@@ -6,7 +6,7 @@ export default function SliderPrice({ value, onChange }: { value: number[]; onCh
     };
 
     return (
-        <div className="slider-price w-full md:max-w-[520px]">
+        <div className="slider-price w-full md:w-auto">
             <p>Pris-interval</p>
             <Slider
                 value={value}
