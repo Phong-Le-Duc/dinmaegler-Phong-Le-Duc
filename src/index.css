@@ -74,6 +74,23 @@ slider-price .MuiSlider-root {
   width: 100%;
 }
 
+/* Ensure each Flickity cell occupies the carousel viewport width to avoid horizontal overflow */
+.flickity-slider > * {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+.carousel img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.flickity-viewport {
+  max-width: 100%;
+}
+
 /* 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
