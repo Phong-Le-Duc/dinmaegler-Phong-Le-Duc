@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router";
 import type { House } from "../../Types";
 import { useNavigate } from "react-router";
@@ -61,11 +61,22 @@ export default function GalleryHouse({
         if (showGallery || showPlan || showMap) {
             if (dialog && !dialog.open) {
                 dialog.showModal();
+                // Give the dialog a tick to become visible, then ask Flickity to recalc sizes
+                setTimeout(() => {
+                    try {
+                        flickityRef.current?.flkty?.resize?.();
+                        flickityRef.current?.flkty?.reposition?.();
+                    } catch (e) {
+                        // ignore if ref not present
+                    }
+                }, 60);
             }
         } else {
             dialog?.close();
         }
     }, [showGallery, showPlan, showMap, dialogRef]);
+
+    const flickityRef = useRef<any>(null);
 
     // Listen for dialog close (Escape or button)
     useEffect(() => {
@@ -98,7 +109,9 @@ export default function GalleryHouse({
                 &times;
             </button>
             {showGallery ? (
-                <FlickityTest house={house} />
+                <div className="bg-white rounded-md p-2">
+                    <FlickityTest house={house} flickityRef={flickityRef} />
+                </div>
             ) : showPlan ? (
                 <img className="max-w-full max-h-[70vh] object-contain block mx-auto" src={house.floorplan && house.floorplan.url ? house.floorplan.url : "/images/placeholder.jpg"} />
             ) : showMap ? (
