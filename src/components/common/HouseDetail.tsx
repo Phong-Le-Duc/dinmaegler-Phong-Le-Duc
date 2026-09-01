@@ -47,35 +47,33 @@ export default function HouseDetail({ house }: HouseCardProps) {
                     />
                 </figure>
                 <section className="content-width">
-                    <div className="flex justify-between my-6 border-b-2 border-gray-300 pb-4 items-center">
-                        <div>
-                            <p>{house.adress1}</p>
-                            <p>{house.postalcode} {house.city}</p>
+                    <div className="flex flex-col md:flex-row justify-between my-6 border-b-2 border-gray-300 pb-4 items-start md:items-center gap-3">
+                        <div className="w-full md:w-auto">
+                            <p className="font-medium">{house.adress1}</p>
+                            <p className="text-sm text-gray-600">{house.postalcode} {house.city}</p>
                         </div>
-                        <div className="flex gap-6 items-center">
+                        <div className="flex gap-4 items-center justify-start md:justify-center">
                             <Link to="?modal=galleri">
-                                <img src={gallery_icon} className="w-12 h-12" alt="Gallery" />
+                                <img src={gallery_icon} className="w-10 h-10" alt="Gallery" />
                             </Link>
                             <Link to="?modal=plantegning">
-                                <img src={plantegning_icon} className="w-12 h-12" alt="Plantegning" />
+                                <img src={plantegning_icon} className="w-10 h-10" alt="Plantegning" />
                             </Link>
                             <Link to="?modal=kort">
-                                <img src={map_icon} className="w-12 h-12" alt="lokation" />
-
+                                <img src={map_icon} className="w-10 h-10" alt="lokation" />
                             </Link>
-                            {/* Heart icon: only visible if logged in */}
                             {token && (
-                                <span
-                                    className="w-12 h-12 flex items-center justify-center cursor-pointer"
+                                <button
                                     onClick={handleFavoriteClick}
                                     title={favorite ? "Fjern fra favoritter" : "Tilføj til favoritter"}
+                                    className="w-10 h-10 flex items-center justify-center"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill={favorite ? "red" : "transparent"}
                                         viewBox="0 0 24 24"
                                         stroke="#888"
-                                        className="w-12 h-12"
+                                        className="w-6 h-6"
                                     >
                                         <path
                                             strokeLinecap="round"
@@ -84,10 +82,12 @@ export default function HouseDetail({ house }: HouseCardProps) {
                                             d="M12 21C12 21 4 13.5 4 8.5C4 5.42 6.42 3 9.5 3C11.24 3 12.91 4.01 13.44 5.36C13.97 4.01 15.64 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 15 21 12 21Z"
                                         />
                                     </svg>
-                                </span>
+                                </button>
                             )}
                         </div>
-                        <p>Kr. {house.price?.toLocaleString('da-DK')}</p>
+                        <div className="w-full md:w-auto text-left md:text-right">
+                            <p className="mt-2 md:mt-0 font-bold text-lg">Kr. {house.price?.toLocaleString('da-DK')}</p>
+                        </div>
                     </div>
                     <div className="mb-12">
                         <table className="w-full">
