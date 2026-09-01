@@ -1,5 +1,7 @@
 import { type Agent } from "../../Types";
 import { Link } from "react-router-dom";
+import maeglerMail from "/src/assets/maegler_mail.png";
+import maeglerLinkedin from "/src/assets/maegler_linkedin.png";
 
 
 export default function AgentCard({ agent }: { agent: Agent }) {
@@ -20,8 +22,8 @@ export default function AgentCard({ agent }: { agent: Agent }) {
                     <p>{agent.title}</p>
 
                     <figure className="flex gap-2 justify-center py-4">
-                        <img src="src/assets/maegler_mail.png" alt="maegler mail" />
-                        <img src="src/assets/maegler_linkedin.png" alt="maegler linkedin" />
+                        <img src={maeglerMail} alt="maegler mail" />
+                        <img src={maeglerLinkedin} alt="maegler linkedin" />
                     </figure>
                 </div>
             </article>

@@ -1,3 +1,10 @@
+import familyImg from "/src/assets/family-moving-using-boxes 1.png";
+import house1 from "/src/assets/house1.png";
+import house2 from "/src/assets/house2.png";
+import property1 from "/src/assets/property1.png";
+import mapsAndFlags from "/src/assets/maps-and-flags1.png";
+import customer1 from "/src/assets/customer1.png";
+
 export default function CompanyAddSection() {
 
     return (
@@ -6,7 +13,7 @@ export default function CompanyAddSection() {
                 <div className="relative h-[310px]">
                     <figure className="w-full h-full">
                         <img
-                            src="src/assets/family-moving-using-boxes 1.png"
+                            src={familyImg}
                             alt="family moving"
                             className="w-full h-full object-cover md:w-80"
                         />
@@ -40,7 +47,7 @@ export default function CompanyAddSection() {
                     <div className="flex mt-4 self-center gap-8">
                         <div className="flex">
                             <figure className="mr-2 bg-dinmaegler-blue-light p-2">
-                                <img src="src/assets/house1.png" alt="house" className="w-10 h-auto" />
+                                <img src={house1} alt="house" className="w-10 h-auto" />
                             </figure>
                             <div className="flex flex-col justify-center">
                                 <p className="font-bold">4829</p>
@@ -50,7 +57,7 @@ export default function CompanyAddSection() {
 
                         <div className="flex">
                             <figure className="mr-2 bg-dinmaegler-blue-light p-2">
-                                <img src="src/assets/house2.png" alt="house" className="w-10 h-auto" />
+                                <img src={house2} alt="house" className="w-10 h-auto" />
                             </figure>
                             <div>
                                 <p className="font-bold">158</p>
@@ -64,7 +71,7 @@ export default function CompanyAddSection() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
                 <div className="flex">
                     <figure className="mr-2 bg-dinmaegler-blue-light p-2 self-start">
-                        <img src="src/assets/property1.png" alt="house" className="w-16 md:w-20 h-auto" />
+                        <img src={property1} alt="house" className="w-16 md:w-20 h-auto" />
                     </figure>
                     <div>
                         <p className="font-bold mb-2">Bestil et salgstjek</p>
@@ -76,7 +83,7 @@ export default function CompanyAddSection() {
 
                 <div className="flex">
                     <figure className="mr-2 bg-dinmaegler-blue-light p-2 self-start">
-                        <img src="src/assets/maps-and-flags1.png" alt="house" className="w-20 h-auto" />
+                        <img src={mapsAndFlags} alt="house" className="w-20 h-auto" />
                     </figure>
                     <div>
                         <p className="font-bold mb-2">74 butikker</p>
@@ -87,7 +94,7 @@ export default function CompanyAddSection() {
 
                 <div className="flex">
                     <figure className="mr-2 bg-dinmaegler-blue-light p-2 self-start">
-                        <img src="src/assets/customer1.png" alt="house" className="w-20 h-auto" />
+                        <img src={customer1} alt="house" className="w-20 h-auto" />
                     </figure>
                     <div className="flex flex-col justify-center">
                         <p className="font-bold mb-2">Tilmeld køberkartotek</p>

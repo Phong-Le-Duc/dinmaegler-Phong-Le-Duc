@@ -8,6 +8,8 @@ import plantegning_icon from "/src/assets/plantegning_icon.png";
 import map_icon from "/src/assets/map_icon.png";
 import favorite_icon from "/src/assets/favorite_icon.png";
 import GalleryHouse from "./GalleryHouse";
+import phone_icon from "/src/assets/phone_icon.svg";
+import mail_icon from "/src/assets/mail_icon.svg";
 
 type HouseCardProps = {
     house: House;
@@ -159,11 +161,11 @@ export default function HouseDetail({ house }: HouseCardProps) {
                                     <p className="font-bold">{house.agent?.name}</p>
                                     <p className="mb-2">{house.agent?.title}</p>
                                     <div className="flex items-center gap-2">
-                                        <img src="/src/assets/phone_icon.svg" alt="Telefon" className="w-4 h-4 img-black" />
+                                        <img src={phone_icon} alt="Telefon" className="w-4 h-4 img-black" />
                                         <p>{house.agent?.phone}</p>
                                     </div>
                                     <div className="flex items-center gap-2">
-                                        <img src="/src/assets/mail_icon.svg" alt="Email" className="w-4 h-4 img-black" />
+                                        <img src={mail_icon} alt="Email" className="w-4 h-4 img-black" />
                                         <p>
                                             <a href={`mailto:${house.agent?.email}`} className="text-blue-600 underline">
                                                 {house.agent?.email}

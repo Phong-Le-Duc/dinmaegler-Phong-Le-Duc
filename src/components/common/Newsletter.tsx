@@ -1,4 +1,5 @@
 import { useState } from "react";
+import arrowRight from "/src/assets/arrow-right.svg";
 
 export default function Newsletter() {
     const [email, setEmail] = useState("");
@@ -45,7 +46,7 @@ export default function Newsletter() {
                     type="submit"
                     disabled={isLoading}
                     className="bg-dinmaegler-white text-dinmaegler-blue p-2 rounded disabled:opacity-50">
-                    {isLoading ? "..." : <img src="src/assets/arrow-right.svg" alt="submit button" />}
+                    {isLoading ? "..." : <img src={arrowRight} alt="submit button" />}
                 </button>
             </form>
         </div>

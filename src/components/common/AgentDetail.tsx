@@ -1,5 +1,7 @@
 // import React from "react";
 import type { Agent } from "../../Types";
+import phoneIcon from "/src/assets/phone_icon.svg";
+import mailIcon from "/src/assets/mail_icon.svg";
 
 
 type AgentCardProps = {
@@ -23,11 +25,11 @@ export default function AgentDetail({ agent }: AgentCardProps) {
                         <p className="text-gray-500">{agent.title}</p>
                         <div className="border-b-2 border-gray-300 my-2 w-10"></div>
                         <p>
-                            <img src="src/assets/phone_icon.svg" alt="" className="inline-block align-middle mr-2 bg-dinmaegler-blue" />
+                            <img src={phoneIcon} alt="" className="inline-block align-middle mr-2 bg-dinmaegler-blue" />
                             {agent.phone}
                         </p>
                         <p>
-                            <img src="src/assets/mail_icon.svg" alt="" className="inline-block align-middle mr-2 bg-dinmaegler-blue" />
+                            <img src={mailIcon} alt="" className="inline-block align-middle mr-2 bg-dinmaegler-blue" />
                             {agent.email}
                         </p>
                     </div>

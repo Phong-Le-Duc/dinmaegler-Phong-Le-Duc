@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLoaderData, useNavigate } from "react-router";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 type House = {
     adress1: string;
@@ -57,7 +57,7 @@ export default function SearchInput() {
                     />
                     {suggestions.length > 0 && (
                         <ul className="absolute left-0 right-0 bg-white border mt-1 rounded shadow z-10">
-                            {suggestions.map((addr, idx) => (
+                            {suggestions.map((addr: string, idx: number) => (
                                 <li
                                     key={idx}
                                     className="p-2 hover:bg-gray-100 cursor-pointer"

@@ -4,6 +4,7 @@ import type { House } from "../../Types";
 import { useNavigate } from "react-router";
 import FlickityTest from "./FlickityTest";
 import { useAuth } from "../../contexts/AuthContext";
+import houseLokation from "/src/assets/house_lokation.png";
 // import { addFavorite, removeFavorite, isFavorite } from "../../utility/favorites";
 
 type GalleryHouseProps = {
@@ -151,7 +152,7 @@ export default function GalleryHouse({
                     title="Map"
                 />
             ) : (
-                <img className="max-w-full max-h-[70vh] object-contain block mx-auto" src="/src/assets/house_lokation.png" />
+                <img className="max-w-full max-h-[70vh] object-contain block mx-auto" src={houseLokation} />
             )}
 
             <div className="flex gap-4 justify-center mt-4 absolute left-1/2 transform -translate-x-1/2">

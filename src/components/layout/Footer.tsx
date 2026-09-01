@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
 import homeIcon from "/src/assets/home_din_maegler.svg";
+import phoneRound from "/src/assets/phone-round-Icon.png";
+import mailRound from "/src/assets/mail-round-icon.png";
+import mapRound from "/src/assets/map-round-icon.png";
+import DMSimg from "/src/assets/DMS.png";
 
 export default function Footer() {
     return (
@@ -21,7 +25,7 @@ export default function Footer() {
                             <div className="bg-dinmaegler-white px-6 py-6 shadow-2xl flex flex-col gap-4 w-full">
                                 <div className="flex transition-colors duration-200 ease-in-out rounded-md hover:bg-blue-200/20 cursor-pointer">
                                     <figure>
-                                        <img src="src/assets/phone-round-Icon.png" alt="" />
+                                        <img src={phoneRound} alt="" />
                                     </figure>
                                     <div className="ml-4">
                                         <p className="text-sm text-gray-500">Ring til os</p>
@@ -30,7 +34,7 @@ export default function Footer() {
                                 </div>
                                 <div className="flex transition-colors duration-200 ease-in-out rounded-md hover:bg-blue-200/20 cursor-pointer">
                                     <figure>
-                                        <img src="src/assets/mail-round-icon.png" alt="" />
+                                        <img src={mailRound} alt="" />
                                     </figure>
                                     <div className="ml-4">
                                         <p className="text-sm text-gray-500">Send en mail</p>
@@ -39,7 +43,7 @@ export default function Footer() {
                                 </div>
                                 <div className="flex transition-colors duration-200 ease-in-out rounded-md hover:bg-blue-200/20 cursor-pointer">
                                     <figure>
-                                        <img src="src/assets/map-round-icon.png" alt="" />
+                                        <img src={mapRound} alt="" />
                                     </figure>
                                     <div className="ml-4">
                                         <p className="text-sm text-gray-500">Butik</p>
@@ -82,7 +86,7 @@ export default function Footer() {
                         <div className="content-width flex items-center justify-between px-4 md:px-0">
                             <div>
                                 <p className="mb-2">medlem af</p>
-                                <img src="src/assets/DMS.png" alt="" className="mb-2 w-24 h-auto" />
+                                <img src={DMSimg} alt="" className="mb-2 w-24 h-auto" />
                                 <p>Dansk Mægler Sammenslutning</p>
                             </div>
                         </div>

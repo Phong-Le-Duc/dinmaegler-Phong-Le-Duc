@@ -1,3 +1,8 @@
+import playStore from "/src/assets/play-store.png";
+import appleStore from "/src/assets/apple.png";
+import phone1 from "/src/assets/phone1.png";
+import phone2 from "/src/assets/phone2.png";
+
 export default function HoldDigOpdateretSection() {
 
     return (
@@ -11,20 +16,20 @@ export default function HoldDigOpdateretSection() {
                     </div>
                     <div className="flex gap-3 mt-5">
                         <button className="bg-dinmaegler-white flex items-center gap-2 px-5 py-3 rounded shadow hover:bg-gray-100 transition">
-                            <img src="src/assets/play-store.png" alt="Google Play" className="w-5 h-5" />
+                            <img src={playStore} alt="Google Play" className="w-5 h-5" />
                             <span className="font-medium text-dinmaegler-blue">Google Play</span>
                         </button>
                         <button className="bg-transparent border border-white flex items-center gap-2 px-5 py-3 rounded hover:bg-white hover:text-dinmaegler-blue transition">
-                            <img src="src/assets/apple.png" alt="Apple Store" className="w-5 h-5" />
+                            <img src={appleStore} alt="Apple Store" className="w-5 h-5" />
                             <span className="text-white font-medium group-hover:text-dinmaegler-blue">Apple Store</span>
                         </button>
                     </div>
                     <div className="hidden md:flex items-end ml-8 absolute right-12 bottom-0">
                         <figure className="z-10">
-                            <img src="src/assets/phone1.png" alt="App på telefon 1" className="h-65 w-auto object-contain" />
+                            <img src={phone1} alt="App på telefon 1" className="h-65 w-auto object-contain" />
                         </figure>
                         <figure className="-ml-16 z-0">
-                            <img src="src/assets/phone2.png" alt="App på telefon 2" className="h-65 w-auto object-contain" />
+                            <img src={phone2} alt="App på telefon 2" className="h-65 w-auto object-contain" />
                         </figure>
                     </div>
                 </div>

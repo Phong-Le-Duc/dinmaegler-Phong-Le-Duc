@@ -1,5 +1,8 @@
 import FormContact from "../components/common/FormContact"
 import Headline from "../components/layout/Headline"
+import phoneRound from "/src/assets/phone-round-Icon.png";
+import mailRound from "/src/assets/mail-round-icon.png";
+import mapRound from "/src/assets/map-round-icon.png";
 
 
 export default function Contact() {
@@ -29,7 +32,7 @@ export default function Contact() {
                     <div className="bg-dinmaegler-white pt-10 p-5 border border-gray-300 rounded-[3px] w-full md:w-80 flex flex-col items-center justify-center mt-6">
                         <div className="w-full flex flex-col items-center border-b border-gray-300 pb-5 mb-5">
                             <figure>
-                                <img src="src/assets/phone-round-Icon.png" alt="" />
+                                <img src={phoneRound} alt="" />
                             </figure>
                             <div className="text-center">
                                 <p className="font-semibold">Ring til os</p>
@@ -39,7 +42,7 @@ export default function Contact() {
 
                         <div className="w-full flex flex-col items-center border-b border-gray-300 pb-5 mb-5">
                             <figure>
-                                <img src="src/assets/mail-round-icon.png" alt="" />
+                                <img src={mailRound} alt="" />
                             </figure>
                             <div className="text-center">
                                 <p className="font-semibold">Send en mail</p>
@@ -49,7 +52,7 @@ export default function Contact() {
 
                         <div className="w-full flex flex-col items-center mb-5">
                             <figure>
-                                <img src="src/assets/map-round-icon.png" alt="" />
+                                <img src={mapRound} alt="" />
                             </figure>
                             <div className="text-center">
                                 <p className="font-semibold">Besøg butikken</p>
