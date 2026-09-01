@@ -90,85 +90,86 @@ export default function HouseDetail({ house }: HouseCardProps) {
                         </div>
                     </div>
                     <div className="mb-12">
-                        <table className="w-full">
-                            <tbody>
-                                <tr>
-                                    <td className="py-1">Sagsnummer:</td>
-                                    <td className="py-1">123456789</td>
-                                    <td className="py-1">Kælder:</td>
-                                    <td className="py-1">{house.basementsize > 0 ? 'Ja' : 'Nej'}</td>
-                                    <td className="py-1">Udbetaling:</td>
-                                    <td className="py-1">Kr. {house.payment?.toLocaleString('da-DK')}</td>
-                                </tr>
-                                <tr>
-                                    <td className="py-1">Boligareal:</td>
-                                    <td className="py-1">{house.livingspace} m²</td>
-                                    <td className="py-1">Byggeår:</td>
-                                    <td className="py-1">{house.built}</td>
-                                    <td className="py-1">Brutto ex ejerudgift:</td>
-                                    <td className="py-1">Kr. {house.gross?.toLocaleString('da-DK')}</td>
-                                </tr>
-                                <tr>
-                                    <td className="py-1">Grundareal:</td>
-                                    <td className="py-1">{house.lotsize} m²</td>
-                                    <td className="py-1">Ombygget:</td>
-                                    <td className="py-1">{house.remodel}</td>
-                                    <td className="py-1">Netto ex ejerudgift:</td>
-                                    <td className="py-1">Kr. {house.netto?.toLocaleString('da-DK')}</td>
-                                </tr>
-                                <tr>
-                                    <td className="py-1">Rum/værelser:</td>
-                                    <td className="py-1">{house.rooms}</td>
-                                    <td className="py-1">Energimærke:</td>
-                                    <td className="py-1">{house.energylabel}</td>
-                                    <td className="py-1">Ejerudgifter:</td>
-                                    <td className="py-1">Kr. {house.cost?.toLocaleString('da-DK')}</td>
-                                </tr>
-                                <tr>
-                                    <td className="py-1">Antal plan:</td>
-                                    <td className="py-1">??</td>
-                                    <td className="py-1"></td>
-                                    <td className="py-1"></td>
-                                    <td className="py-1"></td>
-                                    <td className="py-1"></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div className="grid grid-cols-2 md:grid-cols-6 gap-x-4 gap-y-2 w-full">
+                            <div className="py-1 font-medium">Sagsnummer:</div>
+                            <div className="py-1">123456789</div>
+
+                            <div className="py-1 font-medium">Kælder:</div>
+                            <div className="py-1">{house.basementsize > 0 ? 'Ja' : 'Nej'}</div>
+
+                            <div className="py-1 font-medium">Udbetaling:</div>
+                            <div className="py-1">Kr. {house.payment?.toLocaleString('da-DK')}</div>
+
+                            <div className="py-1 font-medium">Boligareal:</div>
+                            <div className="py-1">{house.livingspace} m²</div>
+
+                            <div className="py-1 font-medium">Byggeår:</div>
+                            <div className="py-1">{house.built}</div>
+
+                            <div className="py-1 font-medium">Brutto ex ejerudgift:</div>
+                            <div className="py-1">Kr. {house.gross?.toLocaleString('da-DK')}</div>
+
+                            <div className="py-1 font-medium">Grundareal:</div>
+                            <div className="py-1">{house.lotsize} m²</div>
+
+                            <div className="py-1 font-medium">Ombygget:</div>
+                            <div className="py-1">{house.remodel}</div>
+
+                            <div className="py-1 font-medium">Netto ex ejerudgift:</div>
+                            <div className="py-1">Kr. {house.netto?.toLocaleString('da-DK')}</div>
+
+                            <div className="py-1 font-medium">Rum/værelser:</div>
+                            <div className="py-1">{house.rooms}</div>
+
+                            <div className="py-1 font-medium">Energimærke:</div>
+                            <div className="py-1">{house.energylabel}</div>
+
+                            <div className="py-1 font-medium">Ejerudgifter:</div>
+                            <div className="py-1">Kr. {house.cost?.toLocaleString('da-DK')}</div>
+
+                            <div className="py-1 font-medium">Antal plan:</div>
+                            <div className="py-1">??</div>
+                        </div>
                     </div>
                     <section className="grid grid-cols-1 md:grid-cols-2 content-width gap-4 mb-10">
-                        <h3 className="font-bold">Beskrivelse</h3>
-                        <h3 className="font-bold">Ansvarlig mægler</h3>
                         <div>
-                            <p>{house.description}</p>
-                        </div>
-                        <div className="flex border border-gray-300 p-4 items-center gap-6 h-40">
+                            <h3 className="font-bold">Beskrivelse</h3>
                             <div>
-                                <figure>
-                                    <img
-                                        src={
-                                            house.agent?.image?.url ||
-                                            "/images/placeholder.jpg"
-                                        }
-                                        alt={house.agent?.name || "Agent"}
-                                        className="w-30 h-30 object-cover border border-gray-300"
-                                    />
-                                </figure>
+                                <p>{house.description}</p>
                             </div>
-                            {/* agent info */}
-                            <div className="flex flex-col justify-center">
-                                <p className="font-bold">{house.agent?.name}</p>
-                                <p className="mb-2">{house.agent?.title}</p>
-                                <div className="flex items-center gap-2">
-                                    <img src="/src/assets/phone_icon.svg" alt="Telefon" className="w-4 h-4 img-black" />
-                                    <p>{house.agent?.phone}</p>
+                        </div>
+
+                        <div>
+                            <h3 className="font-bold">Ansvarlig mægler</h3>
+                            <div className="flex flex-col md:flex-row border border-gray-300 p-4 gap-4 md:gap-6 items-center md:items-center h-auto md:h-40">
+                                <div className="w-full md:w-auto">
+                                    <figure className="mx-auto md:mx-0">
+                                        <img
+                                            src={
+                                                house.agent?.image?.url ||
+                                                "/images/placeholder.jpg"
+                                            }
+                                            alt={house.agent?.name || "Agent"}
+                                            className="w-24 h-24 md:w-32 md:h-32 object-cover border border-gray-300 rounded"
+                                        />
+                                    </figure>
                                 </div>
-                                <div className="flex items-center gap-2">
-                                    <img src="/src/assets/mail_icon.svg" alt="Email" className="w-4 h-4 img-black" />
-                                    <p>
-                                        <a href={`mailto:${house.agent?.email}`} className="text-blue-600 underline">
-                                            {house.agent?.email}
-                                        </a>
-                                    </p>
+                                {/* agent info */}
+                                <div className="flex flex-col justify-center items-start text-left w-full md:w-auto">
+                                    <p className="font-bold">{house.agent?.name}</p>
+                                    <p className="mb-2">{house.agent?.title}</p>
+                                    <div className="flex items-center gap-2">
+                                        <img src="/src/assets/phone_icon.svg" alt="Telefon" className="w-4 h-4 img-black" />
+                                        <p>{house.agent?.phone}</p>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <img src="/src/assets/mail_icon.svg" alt="Email" className="w-4 h-4 img-black" />
+                                        <p>
+                                            <a href={`mailto:${house.agent?.email}`} className="text-blue-600 underline">
+                                                {house.agent?.email}
+                                            </a>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

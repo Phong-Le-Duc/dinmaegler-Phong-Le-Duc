@@ -19,7 +19,7 @@ export default function Footer() {
 
                         <div>
                             <div className="bg-dinmaegler-white px-6 py-6 shadow-2xl flex flex-col gap-4 w-full">
-                                <div className="flex">
+                                <div className="flex transition-colors duration-200 ease-in-out rounded-md hover:bg-blue-200/20 cursor-pointer">
                                     <figure>
                                         <img src="src/assets/phone-round-Icon.png" alt="" />
                                     </figure>
@@ -28,7 +28,7 @@ export default function Footer() {
                                         <p>+45 7070 4000</p>
                                     </div>
                                 </div>
-                                <div className="flex">
+                                <div className="flex transition-colors duration-200 ease-in-out rounded-md hover:bg-blue-200/20 cursor-pointer">
                                     <figure>
                                         <img src="src/assets/mail-round-icon.png" alt="" />
                                     </figure>
@@ -37,7 +37,7 @@ export default function Footer() {
                                         <p>4000@dinmaegler.com</p>
                                     </div>
                                 </div>
-                                <div className="flex">
+                                <div className="flex transition-colors duration-200 ease-in-out rounded-md hover:bg-blue-200/20 cursor-pointer">
                                     <figure>
                                         <img src="src/assets/map-round-icon.png" alt="" />
                                     </figure>
@@ -88,7 +88,7 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="bg-dinmaegler-blue w-full">
-                        <p className="text-white text-center p-6 md:p-10">Layout By Jit Banik 2020</p>
+                        <p className="text-white text-center p-6 md:p-10">Made by Phong Le Duc</p>
                     </div>
                 </div>
             </footer>
