@@ -16,35 +16,39 @@ export default function Topbar() {
     return (
         <>
             <div className="bg-dinmaegler-blue">
-                <div className="header-width flex items-center justify-between p-5 gap-4">
-                    <a
-                        href="mailto:4000@dinmaegler.com"
-                        className="flex items-center text-white hover:underline"
-                    >
-                        <img src={mailto} alt="Home" className="w-5 h-5 mr-1" />
-                        4000@dinmaegler.com
-                    </a>
+                <div className="header-width flex flex-col md:flex-row items-center gap-2 md:justify-between p-4">
+                    <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 w-full md:w-auto text-white">
+                        <a
+                            href="mailto:4000@dinmaegler.com"
+                            className="flex items-center hover:underline"
+                        >
+                            <img src={mailto} alt="Home" className="w-5 h-5 mr-1" />
+                            <span className="text-sm">4000@dinmaegler.com</span>
+                        </a>
 
-                    <a href="tel:+45 7070 4000" className="flex items-center text-white hover:underline">
-                        <img src={phoneIcon} alt="Phone" className="w-5 h-5 mr-1" />
-                        +45 7070 4000
-                    </a>
+                        <a href="tel:+45 7070 4000" className="flex items-center hover:underline">
+                            <img src={phoneIcon} alt="Phone" className="w-5 h-5 mr-1" />
+                            <span className="text-sm">+45 7070 4000</span>
+                        </a>
+                    </div>
 
-                    {token ? (
-                        <button onClick={logout} className="flex items-center ml-auto cursor-pointer bg-black p-2 rounded transition hover:bg-blue-700 hover:shadow">
-                            <img src={loginIcon}
-                                alt="logout"
-                                className="mr-2" />
-                            <p className="text-white">Log ud</p>
-                        </button>
-                    ) : (
-                        <Link to="/login" state={{ from: location }} className="flex items-center ml-auto cursor-pointer bg-black p-2 rounded transition hover:bg-blue-700 hover:shadow">
-                            <img src={loginIcon}
-                                alt="login"
-                                className="mr-2" />
-                            <p className="text-white">Log in</p>
-                        </Link>
-                    )}
+                    <div className="w-full md:w-auto flex justify-center md:justify-end mt-2 md:mt-0">
+                        {token ? (
+                            <button onClick={logout} className="flex items-center cursor-pointer bg-black p-2 rounded transition hover:bg-blue-700 hover:shadow">
+                                <img src={loginIcon}
+                                    alt="logout"
+                                    className="mr-2" />
+                                <p className="text-white">Log ud</p>
+                            </button>
+                        ) : (
+                            <Link to="/login" state={{ from: location }} className="flex items-center cursor-pointer bg-black p-2 rounded transition hover:bg-blue-700 hover:shadow">
+                                <img src={loginIcon}
+                                    alt="login"
+                                    className="mr-2" />
+                                <p className="text-white">Log in</p>
+                            </Link>
+                        )}
+                    </div>
                 </div>
             </div>
         </>
