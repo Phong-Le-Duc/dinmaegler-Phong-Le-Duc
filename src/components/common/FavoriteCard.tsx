@@ -19,19 +19,19 @@ export default function FavoriteCard({ house, onFavoriteChange }: FavoriteCardPr
     }
 
     return (
-        <div className="rounded-[2px] border-1 border-gray-50 flex my-5 text-sm relative">
+        <div className="rounded-[2px] border-1 border-gray-50 bg-gray-200 my-5 text-sm relative flex flex-col md:flex-row">
             {/* Custom layout for favorite card */}
             <Link to={`/detail-homes/${house.id}`} className="block">
-                <figure className="w-60 flex-shrink-0 p-4">
+                <figure className="w-full md:w-60 flex-shrink-0 p-4 pb-0">
                     <img
                         src={house.images ? house.images[0].url : '/images/placeholder.jpg'}
                         alt={`${house.type} i ${house.city}`}
-                        className="w-full h-30 object-cover"
+                        className="w-full h-48 md:h-30 object-cover"
                     />
                 </figure>
             </Link>
-            <div className="flex-1 flex justify-between p-4">
-                <div className="flex flex-col gap-3">
+            <div className="flex-1 flex flex-col md:flex-row justify-between p-4">
+                <div className="flex flex-col gap-2">
                     <Link to={`/detail-homes/${house.id}`} className="block"><h3>{house.adress1}</h3></Link>
                     <h3><span>{house.postalcode}</span> {house.city}</h3>
                     <h3>
@@ -39,7 +39,7 @@ export default function FavoriteCard({ house, onFavoriteChange }: FavoriteCardPr
                         &nbsp;•&nbsp; Ejerudgift: {house.cost.toLocaleString("da-DK")} kr.
                     </h3>
                 </div>
-                <div className="flex gap-2 ">
+                <div className="flex gap-2 items-center md:items-start">
                     <p className={`${getEnergyLabelColor(house.energylabel)} px-2 pb-0.75 py-0.5 rounded inline-block self-start`}>
                         {house.energylabel}
                     </p>
@@ -50,7 +50,7 @@ export default function FavoriteCard({ house, onFavoriteChange }: FavoriteCardPr
                     <p className="ml-8"><span className="mr-2">kr.</span>{house.price.toLocaleString("da-DK")}</p>
                 </div>
                 <button
-                    className="absolute bottom-4 right-4 bg-dinmaegler-blue text-white p-2 cursor-pointer hover:bg-dinmaegler-darkblue"
+                    className="md:absolute md:bottom-4 md:right-4 bg-dinmaegler-blue text-white p-2 cursor-pointer hover:bg-dinmaegler-darkblue mt-4 md:mt-0"
                     onClick={handleRemoveFavorite}
                 >
                     Fjern fra favoritter
